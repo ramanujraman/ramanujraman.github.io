@@ -1,0 +1,10 @@
+* {
+  font-family: monospace;
+  font-size: 22px;
+  background-color: aqua;
+}
+  
+.highlight{
+  text-transform: none;
+  background-color: gold;
+}
