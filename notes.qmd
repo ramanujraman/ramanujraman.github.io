@@ -1,6 +1,0 @@
----
-title: Physics Notes
----
-
-## Quantum Mechanics
-- [Quantum States and Measurements](Notes/quantum_mechanics.qmd)

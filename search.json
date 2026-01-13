@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "blogs.html",
+    "href": "blogs.html",
+    "title": "Some Ideas",
+    "section": "",
+    "text": "Here are some ideas which are floating around in my head. They may or may not be fully formed, I may or may not pursue them, but I want to write them down before they are lost. These ideas could be related to physics, programming, or anything else that interests me. Feel free to reach out if any of these ideas resonate with you! and you want to discuss or collaborate on them."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "",
+    "text": "Hi there! I’m Ramanuj Raman, a physics enthusiast with a keen interest in every problem of physics I can get my hands on. Currently, I am pursuing my Int-BSMS at the Indian Institute of Science Education and Research (IISER) Mohali. I am in my final year and working on my master’s thesis on Error Budget in Dispersive Readout at PGI-8 (Instiute for Quantum Control), at Forschungszentrum Jülich, Germany, under the supervision of Prof. Dr. Felix Motzoi and Dr. F.A. Cardenas Lopéz.\n Before this I have worked on projects related to light-matter interaction including Jaynes-Cummings, Electromagnetically Induced Transparency, simulation of phases of matter in Bose-Hubbard models, understanding topological phenomena in the SSH model and Kitaev chain.\nMy current interests lie in using techniques from quantum information theory to understand condensed matter systems, and in exploring quantum control methods to improve qubit readout and gate fidelities.\nApart from physics, I enjoy coding, photography, philosophy and writing poems. I have experience working with julia and python for simulations of quantum system and other physical systems in general. I also like to teach and solve problems which has lead me run a semi-active youtube channel R2E and I also like to talk to fellow physicist on problems and there prespectives on things.\nFeel free to explore my notes and blogs to learn more about my work and thoughts. If you want more about my professional experience please look at my CV here"
+  },
+  {
+    "objectID": "index.html#update-log",
+    "href": "index.html#update-log",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "Update Log",
+    "text": "Update Log\n\n12 January 2026: Redesigned the website layout for…idk fun I guess. Just kidding, I wanted a cleaner look and better way to organize and present my notes and blogs."
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "Contact",
+    "text": "Contact\n\n📧 Email: ramanujraman@icloud.com\n💼 LinkedIn: linkedin.com/in/ramanuj-raman"
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "Physics Notes",
+    "section": "",
+    "text": "Quantum States and Measurements"
+  },
+  {
+    "objectID": "notes.html#quantum-mechanics",
+    "href": "notes.html#quantum-mechanics",
+    "title": "Physics Notes",
+    "section": "",
+    "text": "Quantum States and Measurements"
+  },
+  {
+    "objectID": "Notes/quantum_mechanics.html",
+    "href": "Notes/quantum_mechanics.html",
+    "title": "Open Quantum Systems",
+    "section": "",
+    "text": "Realistic quantum systems are never perfectly isolated and must be described using density matrices."
+  },
+  {
+    "objectID": "Notes/quantum_mechanics.html#motivation",
+    "href": "Notes/quantum_mechanics.html#motivation",
+    "title": "Open Quantum Systems",
+    "section": "",
+    "text": "Realistic quantum systems are never perfectly isolated and must be described using density matrices."
+  },
+  {
+    "objectID": "Notes/quantum_mechanics.html#lindblad-master-equation",
+    "href": "Notes/quantum_mechanics.html#lindblad-master-equation",
+    "title": "Open Quantum Systems",
+    "section": "Lindblad Master Equation",
+    "text": "Lindblad Master Equation\n\\[\nH = \\omega_r a^\\dagger a + \\frac{\\omega_q}{2}\\sigma_z\n\\tag{1}\\]\nSee Equation 1."
+  }
+]
