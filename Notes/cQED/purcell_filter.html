@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Ramanuj Raman">
+<meta name="dcterms.date" content="2026-01-13">
 
-<title>Physics Notes – Ramanuj Raman</title>
+<title>Purcell Filter – Ramanuj Raman</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +25,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-6bd9cfa162949bde0a231f530c97869d.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,8 +69,37 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -78,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Ramanuj Raman</span>
     </a>
   </div>
@@ -89,11 +120,11 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./notes.html" aria-current="page"> 
+    <a class="nav-link" href="../../notes.html"> 
 <span class="menu-text">Notes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./blogs.html"> 
+    <a class="nav-link" href="../../blogs.html"> 
 <span class="menu-text">Some Ideas</span></a>
   </li>  
 </ul>
@@ -112,24 +143,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#quantum-mechanics" id="toc-quantum-mechanics" class="nav-link active" data-scroll-target="#quantum-mechanics">Quantum Mechanics</a></li>
-  <li><a href="#circuit-quantum-electrodynamics-cqed" id="toc-circuit-quantum-electrodynamics-cqed" class="nav-link" data-scroll-target="#circuit-quantum-electrodynamics-cqed">Circuit Quantum Electrodynamics (cQED)</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation"><span class="header-section-number">1</span> Motivation</a></li>
+  <li><a href="#circuit-diagram-and-hamiltonian" id="toc-circuit-diagram-and-hamiltonian" class="nav-link" data-scroll-target="#circuit-diagram-and-hamiltonian"><span class="header-section-number">2</span> Circuit Diagram and Hamiltonian</a></li>
+  <li><a href="#semiclassical-analysis-of-purcell-filter" id="toc-semiclassical-analysis-of-purcell-filter" class="nav-link" data-scroll-target="#semiclassical-analysis-of-purcell-filter"><span class="header-section-number">3</span> Semiclassical Analysis of Purcell Filter</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="notes.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="purcell_filter.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Physics Notes</h1>
+<h1 class="title">Purcell Filter</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Ramanuj Raman </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 13, 2026</p>
+    </div>
+  </div>
   
     
   </div>
@@ -139,19 +183,46 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="quantum-mechanics" class="level2">
-<h2 class="anchored" data-anchor-id="quantum-mechanics">Quantum Mechanics</h2>
+<section id="motivation" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="motivation"><span class="header-section-number">1</span> Motivation</h2>
+<p>In circuit QED, the qubit is coupled to a readout resonator which is in turn coupled to a transmission line. This coupling allows for interaction of the qubit with field around and sends away it’s information to the measurement apparatus, FPGAs in our case. However, this coupling is dispersive in nature and lead to unwanted decay of qubit state via the resonator, known as Purcell decay. To mitigate this we use a Purcell filter, obviously. The system hamiltonian is given by <span id="eq-disp-ham"><span class="math display">\[
+H = (\omega_r + \chi \sigma_z) a^\dagger a + \frac{\omega_q}{2}\sigma_z
+\tag{1}\]</span></span> where <span class="math inline">\(\chi = \frac{g^2}{\Delta}\)</span> is the dispersive shift which is the amount by which the resonator frequency shifts depending on the qubit state. We exploit this shift to tell the qubit state. But the problem is the readout resonator decays into the transmission line with a rate <span class="math inline">\(\kappa_r\)</span>, this is essentially in some sense the rate at which information about the qubit state is gained. This decay also opens up a decay channel for the qubit via the resonator given as <span class="math inline">\(a \to a-\frac{g}{\Delta} \sigma_{-}\)</span>. This leads to an effective decay rate of the qubit given by <span class="math inline">\(\kappa (\frac{g}{\Delta})^2\)</span>.<br>
+Now the possible way out of this decay problem is:</p>
 <ul>
-<li><a href="./Notes/quantum_mechanics.html">Quantum States and Measurements</a></li>
+<li>Increase <span class="math inline">\(\Delta\)</span>: But this reduces <span class="math inline">\(\chi\)</span> and hence the readout fidelity.</li>
+<li>Decrease <span class="math inline">\(\kappa_r\)</span>: But this increases the readout time and hence reduces the measurement bandwidth.</li>
+<li>Decrease <span class="math inline">\(g\)</span>: But this again reduces <span class="math inline">\(\chi\)</span> and hence the readout fidelity.</li>
 </ul>
+<p>Now another way forward is to somehow have different rates for resonator and qubit. This is where the Purcell filter comes in.</p>
 </section>
-<section id="circuit-quantum-electrodynamics-cqed" class="level2">
-<h2 class="anchored" data-anchor-id="circuit-quantum-electrodynamics-cqed">Circuit Quantum Electrodynamics (cQED)</h2>
-<ul>
-<li>Light-Matter Interaction in cQED</li>
-<li>Dispersive Readout in cQED</li>
-<li><a href="./Notes/cQED/purcell_filter.html">Purcell Filter</a></li>
-</ul>
+<section id="circuit-diagram-and-hamiltonian" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="circuit-diagram-and-hamiltonian"><span class="header-section-number">2</span> Circuit Diagram and Hamiltonian</h2>
+<div id="fig-elephants" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
+<img src="Notes-figs/Purcell_Filter_circuit.png" class="img-fluid figure-img">
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Circuit Diagram of a qubit coupled to a readout resonator which is in turn coupled to a Purcell filter and then to the transmission line
+</figcaption>
+</figure>
+</div>
+<p>Consider the hamiltonian of coupled-resonators and qubit system given by <span id="eq-purc-ham"><span class="math display">\[
+\hat{H} = \omega_r a^\dagger a + \omega_f b^\dagger b + G^{*} a b^\dagger + G a^\dagger b + \omega_q \sigma_{+}\sigma_{-} + g(a \sigma_{+} + a^\dagger \sigma_{-})
+\tag{2}\]</span></span> The above is the circuit diagram and hamiltonian which we’ll be using to understand the dyanmics of the field first using semiclassical analysis and then using quantum treatment.</p>
+</section>
+<section id="semiclassical-analysis-of-purcell-filter" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="semiclassical-analysis-of-purcell-filter"><span class="header-section-number">3</span> Semiclassical Analysis of Purcell Filter</h2>
+<p>Now by looking at the resonator field evolution (<span class="math inline">\(\hat{a}\)</span>) and filter field evolution (<span class="math inline">\(\hat{b}\)</span>) in the rotating frame at the drive frequency,<span class="math inline">\(e^{i \omega_d t}\)</span> then the langevin equation in the semi-classical limit is given by <span class="math display">\[
+\dot{\alpha} = -i \Delta_{rd} \alpha - i G \beta - i g \epsilon_r
+\]</span> <span class="math display">\[
+\dot{\beta} = -i \Delta_{fd} \beta - i G^{*} \alpha - \frac{\kappa_f}{2} \beta
+\]</span></p>
 
 
 </section>
