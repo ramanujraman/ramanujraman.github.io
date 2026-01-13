@@ -1,0 +1,149 @@
+[
+  {
+    "objectID": "Notes/quantum_mechanics.html",
+    "href": "Notes/quantum_mechanics.html",
+    "title": "Open Quantum Systems",
+    "section": "",
+    "text": "Realistic quantum systems are never perfectly isolated and must be described using density matrices."
+  },
+  {
+    "objectID": "Notes/quantum_mechanics.html#motivation",
+    "href": "Notes/quantum_mechanics.html#motivation",
+    "title": "Open Quantum Systems",
+    "section": "",
+    "text": "Realistic quantum systems are never perfectly isolated and must be described using density matrices."
+  },
+  {
+    "objectID": "Notes/quantum_mechanics.html#lindblad-master-equation",
+    "href": "Notes/quantum_mechanics.html#lindblad-master-equation",
+    "title": "Open Quantum Systems",
+    "section": "2 Lindblad Master Equation",
+    "text": "2 Lindblad Master Equation\n\\[\nH = \\omega_r a^\\dagger a + \\frac{\\omega_q}{2}\\sigma_z\n\\tag{1}\\]\nSee Equation 1."
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "Physics Notes",
+    "section": "",
+    "text": "Quantum States and Measurements"
+  },
+  {
+    "objectID": "notes.html#quantum-mechanics",
+    "href": "notes.html#quantum-mechanics",
+    "title": "Physics Notes",
+    "section": "",
+    "text": "Quantum States and Measurements"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "",
+    "text": "Hi there! I’m Ramanuj Raman, a physics enthusiast with a keen interest in every problem of physics I can get my hands on. Currently, I am pursuing my Int-BSMS at the Indian Institute of Science Education and Research (IISER) Mohali. I am in my final year and working on my master’s thesis on Error Budget in Dispersive Readout at PGI-8 (Instiute for Quantum Control), at Forschungszentrum Jülich, Germany, under the supervision of Prof. Dr. Felix Motzoi and Dr. F.A. Cardenas Lopéz.\n Before this I have worked on projects related to light-matter interaction including Jaynes-Cummings, Electromagnetically Induced Transparency, simulation of phases of matter in Bose-Hubbard models, understanding topological phenomena in the SSH model and Kitaev chain.\nMy current interests lie in using techniques from quantum information theory to understand condensed matter systems, and in exploring quantum control methods to improve qubit readout and gate fidelities.\nApart from physics, I enjoy coding, photography, philosophy and writing poems. I have experience working with julia and python for simulations of quantum system and other physical systems in general. I also like to teach and solve problems which has lead me run a semi-active youtube channel R2E and I also like to talk to fellow physicist on problems and there prespectives on things.\nFeel free to explore my notes and blogs to learn more about my work and thoughts. If you want more about my professional experience please look at my CV here"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I am a BS-MS Physics student at the Indian Institute of Science Education and Research (IISER) Mohali, currently in my final year. My academic journey has been driven by a fascination with how we can control quantum systems to push the boundaries of modern computing.\nSince May 2025, I have been a Master’s Thesis student at the Peter Grünberg Institute (PGI-8) within Forschungszentrum Jülich, Germany. Under the guidance of Dr. Francisco Cárdenas López and Prof. Dr. Felix Motzoi, I am investigating the “Error Budget in Dispersive Readout,” specifically focusing on how to characterize and mitigate errors in superconducting qubits to enable high-fidelity quantum error correction."
+  },
+  {
+    "objectID": "blogs.html",
+    "href": "blogs.html",
+    "title": "Some Ideas",
+    "section": "",
+    "text": "Here are some ideas which are floating around in my head. They may or may not be fully formed, I may or may not pursue them, but I want to write them down before they are lost. These ideas could be related to physics, programming, or anything else that interests me. Feel free to reach out if any of these ideas resonate with you! and you want to discuss or collaborate on them."
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "1 About Me",
+    "text": "1 About Me\nHi there! I’m Ramanuj Raman, a physics enthusiast with a keen interest in every problem of physics I can get my hands on. Currently, I am pursuing my Int-BSMS at the Indian Institute of Science Education and Research (IISER) Mohali. I am in my final year and working on my master’s thesis on Error Budget in Dispersive Readout at PGI-8 (Instiute for Quantum Control), at Forschungszentrum Jülich, Germany, under the supervision of Prof. Dr. Felix Motzoi and Dr. F.A. Cardenas Lopéz.\nBefore this I have worked on projects related to light-matter interaction including Jaynes-Cummings, Electromagnetically Induced Transparency, simulation of phases of matter in Bose-Hubbard models, understanding topological phenomena in the SSH model and Kitaev chain.\nMy current interests lie in using techniques from quantum information theory to understand condensed matter systems, and in exploring quantum control methods to improve qubit readout and gate fidelities.\nFeel free to explore my notes and blogs to learn more about my work and thoughts!"
+  },
+  {
+    "objectID": "index.html#contact-me",
+    "href": "index.html#contact-me",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "1 Contact me",
+    "text": "1 Contact me\nYou can reach me at: - Email: - LinkedIn: ### Contact\n\n📧 Email: ramanuj.raman@example.com\n💼 LinkedIn: linkedin.com/in/ramanuj-raman"
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "Contact",
+    "text": "Contact\n\n📧 Email: ramanujraman@icloud.com\n💼 LinkedIn: linkedin.com/in/ramanuj-raman"
+  },
+  {
+    "objectID": "index.html#update-log",
+    "href": "index.html#update-log",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "Update Log",
+    "text": "Update Log\n\n12 January 2026: Redesigned the website layout for…idk fun I guess. Just kidding, I wanted a cleaner look and better way to organize and present my notes and blogs."
+  },
+  {
+    "objectID": "about.html#biography",
+    "href": "about.html#biography",
+    "title": "About Me",
+    "section": "",
+    "text": "I am a BS-MS Physics student at the Indian Institute of Science Education and Research (IISER) Mohali, currently in my final year. My academic journey has been driven by a fascination with how we can control quantum systems to push the boundaries of modern computing.\nSince May 2025, I have been a Master’s Thesis student at the Peter Grünberg Institute (PGI-8) within Forschungszentrum Jülich, Germany. Under the guidance of Dr. Francisco Cárdenas López and Prof. Dr. Felix Motzoi, I am investigating the “Error Budget in Dispersive Readout,” specifically focusing on how to characterize and mitigate errors in superconducting qubits to enable high-fidelity quantum error correction."
+  },
+  {
+    "objectID": "about.html#education",
+    "href": "about.html#education",
+    "title": "Ramanuj Raman",
+    "section": "Education",
+    "text": "Education\n\nBS-MS in Physics | IISER Mohali | [cite_start]Dec. 2021 – June 2026 (Expected) [cite: 6, 23, 36]\nHigh School Education | Kendriya Vidyalaya Bangana | [cite_start]Mar. 2021 [cite: 26, 27, 38]"
+  },
+  {
+    "objectID": "about.html#research-interests",
+    "href": "about.html#research-interests",
+    "title": "Ramanuj Raman",
+    "section": "Research Interests",
+    "text": "Research Interests\n\n[cite_start]Quantum Error Correction and Readout Fidelity [cite: 39, 40]\n[cite_start]Light-Matter Interaction and Excitation Dynamics [cite: 47, 48]\n[cite_start]Open Quantum Systems and Dissipative Dynamics [cite: 79]\n[cite_start]Quantum Algorithms and Machine Learning [cite: 66, 69, 73]"
+  },
+  {
+    "objectID": "about.html#community-involvement",
+    "href": "about.html#community-involvement",
+    "title": "Ramanuj Raman",
+    "section": "Community Involvement",
+    "text": "Community Involvement\nBeyond my research, I am dedicated to teaching and community service. [cite_start]I have conducted multiple help sessions for undergraduate students in Mechanics, Electromagnetism, and Modern Physics[cite: 95, 96, 97, 98]. [cite_start]I also volunteer with the Prayatana Organization, providing education and support to underprivileged children[cite: 99, 100, 101]."
+  },
+  {
+    "objectID": "about.html#research-focus",
+    "href": "about.html#research-focus",
+    "title": "About Me",
+    "section": "Research Focus",
+    "text": "Research Focus\nMy work bridges the gap between theoretical physics and experimental implementation:\n\nSuperconducting Qubits: Analyzing drive-induced state transitions and resonator decay to improve readout fidelity.\nPulse Engineering: Exploring techniques like DRACHMA for active resonator reset and maintaining QNDness (Quantum Non-Demolition) during readout.\nLight-Matter Interaction: I have conducted numerical investigations into 3-level Jaynes-Cummings Models and the Bose-Hubbard model using both Python and C++."
+  },
+  {
+    "objectID": "about.html#technical-expertise",
+    "href": "about.html#technical-expertise",
+    "title": "About Me",
+    "section": "Technical Expertise",
+    "text": "Technical Expertise\nI enjoy solving complex problems through a mix of analytical derivation and numerical simulation. My toolkit includes:\n\nLanguages: Python, Julia, and C++ (with a focus on high-performance stochastic simulations).\nFrameworks: Qiskit for quantum circuit design, QuTiP for open quantum systems, and QuantumCumulant.jl for symbolic derivations.\nMethods: Schrieffer-Wolff transformations, Lindblad Master Equations, and the Gillespie Algorithm."
+  },
+  {
+    "objectID": "about.html#beyond-the-lab",
+    "href": "about.html#beyond-the-lab",
+    "title": "About Me",
+    "section": "Beyond the Lab",
+    "text": "Beyond the Lab\nEducation is a core value of mine. I have spent several semesters as a peer tutor, conducting help sessions in Mechanics and Electromagnetism for undergraduates. I also believe in social responsibility and actively volunteer with Prayatana, an organization dedicated to providing education and resources to underprivileged children in Mohali.\n\n\nKey Honors\n\nQuantum Excellence Badge (2024 Qiskit Global Summer School)\nAIR 367 in the IISER Aptitude Test\nState Champion in the Vidhyarthi Vigyan Manthan (VVM)\n\nFor my detailed CV, please visit here"
+  },
+  {
+    "objectID": "gallery.html",
+    "href": "gallery.html",
+    "title": "Gallery",
+    "section": "",
+    "text": "Scroll horizontally to see images:\n\n\n\n\n\n\nLab 1\n\n\n\n\n\n\nLab 2\n\n\n\n\n\n\nConference"
+  },
+  {
+    "objectID": "gallery.html#my-time-in-germany",
+    "href": "gallery.html#my-time-in-germany",
+    "title": "Gallery",
+    "section": "",
+    "text": "Scroll horizontally to see images:\n\n\n\n\n\n\nLab 1\n\n\n\n\n\n\nLab 2\n\n\n\n\n\n\nConference"
+  }
+]

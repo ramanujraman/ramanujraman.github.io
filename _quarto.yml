@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Ramanuj Raman"
+  navbar:
+    left:
+      - text: Notes
+        href: notes.qmd
+      - text: Some Ideas
+        href: blogs.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    number-sections: false
+    mathjax: true
+
+  typst:
+    toc: true
+    number-sections: true
