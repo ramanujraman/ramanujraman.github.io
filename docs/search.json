@@ -7,6 +7,55 @@
     "text": "Here are some ideas which are floating around in my head. They may or may not be fully formed, I may or may not pursue them, but I want to write them down before they are lost. These ideas could be related to physics, programming, or anything else that interests me. Feel free to reach out if any of these ideas resonate with you! and you want to discuss or collaborate on them."
   },
   {
+    "objectID": "Notes/cQED/purcell_filter.html",
+    "href": "Notes/cQED/purcell_filter.html",
+    "title": "Purcell Filter",
+    "section": "",
+    "text": "In circuit QED, the qubit is coupled to a readout resonator which is in turn coupled to a transmission line. This coupling allows for interaction of the qubit with field around and sends away it’s information to the measurement apparatus, FPGAs in our case. However, this coupling is dispersive in nature and lead to unwanted decay of qubit state via the resonator, known as Purcell decay. To mitigate this we use a Purcell filter, obviously. The system hamiltonian is given by \\[\nH = (\\omega_r + \\chi \\sigma_z) a^\\dagger a + \\frac{\\omega_q}{2}\\sigma_z\n\\tag{1}\\] where \\(\\chi = \\frac{g^2}{\\Delta}\\) is the dispersive shift which is the amount by which the resonator frequency shifts depending on the qubit state. We exploit this shift to tell the qubit state. But the problem is the readout resonator decays into the transmission line with a rate \\(\\kappa_r\\), this is essentially in some sense the rate at which information about the qubit state is gained. This decay also opens up a decay channel for the qubit via the resonator given as \\(a \\to a-\\frac{g}{\\Delta} \\sigma_{-}\\). This leads to an effective decay rate of the qubit given by \\(\\kappa (\\frac{g}{\\Delta})^2\\).\nNow the possible way out of this decay problem is:\n\nIncrease \\(\\Delta\\): But this reduces \\(\\chi\\) and hence the readout fidelity.\nDecrease \\(\\kappa_r\\): But this increases the readout time and hence reduces the measurement bandwidth.\nDecrease \\(g\\): But this again reduces \\(\\chi\\) and hence the readout fidelity.\n\nNow another way forward is to somehow have different rates for resonator and qubit. This is where the Purcell filter comes in."
+  },
+  {
+    "objectID": "Notes/cQED/purcell_filter.html#motivation",
+    "href": "Notes/cQED/purcell_filter.html#motivation",
+    "title": "Purcell Filter",
+    "section": "",
+    "text": "In circuit QED, the qubit is coupled to a readout resonator which is in turn coupled to a transmission line. This coupling allows for interaction of the qubit with field around and sends away it’s information to the measurement apparatus, FPGAs in our case. However, this coupling is dispersive in nature and lead to unwanted decay of qubit state via the resonator, known as Purcell decay. To mitigate this we use a Purcell filter, obviously. The system hamiltonian is given by \\[\nH = (\\omega_r + \\chi \\sigma_z) a^\\dagger a + \\frac{\\omega_q}{2}\\sigma_z\n\\tag{1}\\] where \\(\\chi = \\frac{g^2}{\\Delta}\\) is the dispersive shift which is the amount by which the resonator frequency shifts depending on the qubit state. We exploit this shift to tell the qubit state. But the problem is the readout resonator decays into the transmission line with a rate \\(\\kappa_r\\), this is essentially in some sense the rate at which information about the qubit state is gained. This decay also opens up a decay channel for the qubit via the resonator given as \\(a \\to a-\\frac{g}{\\Delta} \\sigma_{-}\\). This leads to an effective decay rate of the qubit given by \\(\\kappa (\\frac{g}{\\Delta})^2\\).\nNow the possible way out of this decay problem is:\n\nIncrease \\(\\Delta\\): But this reduces \\(\\chi\\) and hence the readout fidelity.\nDecrease \\(\\kappa_r\\): But this increases the readout time and hence reduces the measurement bandwidth.\nDecrease \\(g\\): But this again reduces \\(\\chi\\) and hence the readout fidelity.\n\nNow another way forward is to somehow have different rates for resonator and qubit. This is where the Purcell filter comes in."
+  },
+  {
+    "objectID": "Notes/cQED/purcell_filter.html#circuit-diagram-and-hamiltonian",
+    "href": "Notes/cQED/purcell_filter.html#circuit-diagram-and-hamiltonian",
+    "title": "Purcell Filter",
+    "section": "2 Circuit Diagram and Hamiltonian",
+    "text": "2 Circuit Diagram and Hamiltonian\n\n\n\n\n\n\n\n\n\n\nFigure 1: Circuit Diagram of a qubit coupled to a readout resonator which is in turn coupled to a Purcell filter and then to the transmission line\n\n\n\nConsider the hamiltonian of coupled-resonators and qubit system given by \\[\n\\hat{H} = \\omega_r a^\\dagger a + \\omega_f b^\\dagger b + G^{*} a b^\\dagger + G a^\\dagger b + \\omega_q \\sigma_{+}\\sigma_{-} + g(a \\sigma_{+} + a^\\dagger \\sigma_{-})\n\\tag{2}\\] The above is the circuit diagram and hamiltonian which we’ll be using to understand the dyanmics of the field first using semiclassical analysis and then using quantum treatment."
+  },
+  {
+    "objectID": "Notes/cQED/purcell_filter.html#semiclassical-analysis-of-purcell-filter",
+    "href": "Notes/cQED/purcell_filter.html#semiclassical-analysis-of-purcell-filter",
+    "title": "Purcell Filter",
+    "section": "3 Semiclassical Analysis of Purcell Filter",
+    "text": "3 Semiclassical Analysis of Purcell Filter\nNow by looking at the resonator field evolution (\\(\\hat{a}\\)) and filter field evolution (\\(\\hat{b}\\)) in the rotating frame at the drive frequency,\\(e^{i \\omega_d t}\\) then the langevin equation in the semi-classical limit is given by \\[\n\\dot{\\alpha} = -i \\Delta_{rd} \\alpha - i G \\beta - i g \\epsilon_r\n\\] \\[\n\\dot{\\beta} = -i \\Delta_{fd} \\beta - i G^{*} \\alpha - \\frac{\\kappa_f}{2} \\beta\n\\]"
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "Physics Notes",
+    "section": "",
+    "text": "Quantum States and Measurements"
+  },
+  {
+    "objectID": "notes.html#quantum-mechanics",
+    "href": "notes.html#quantum-mechanics",
+    "title": "Physics Notes",
+    "section": "",
+    "text": "Quantum States and Measurements"
+  },
+  {
+    "objectID": "notes.html#circuit-quantum-electrodynamics-cqed",
+    "href": "notes.html#circuit-quantum-electrodynamics-cqed",
+    "title": "Physics Notes",
+    "section": "Circuit Quantum Electrodynamics (cQED)",
+    "text": "Circuit Quantum Electrodynamics (cQED)\n\nLight-Matter Interaction in cQED\nDispersive Readout in cQED\nPurcell Filter"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "Welcome to Ramanuj’s World",
@@ -26,20 +75,6 @@
     "title": "Welcome to Ramanuj’s World",
     "section": "Contact",
     "text": "Contact\n\n📧 Email: ramanujraman@icloud.com\n💼 LinkedIn: linkedin.com/in/ramanuj-raman"
-  },
-  {
-    "objectID": "notes.html",
-    "href": "notes.html",
-    "title": "Physics Notes",
-    "section": "",
-    "text": "Quantum States and Measurements"
-  },
-  {
-    "objectID": "notes.html#quantum-mechanics",
-    "href": "notes.html#quantum-mechanics",
-    "title": "Physics Notes",
-    "section": "",
-    "text": "Quantum States and Measurements"
   },
   {
     "objectID": "Notes/quantum_mechanics.html",

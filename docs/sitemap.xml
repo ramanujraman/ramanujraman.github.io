@@ -2,15 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://ramanujraman.github.io/blogs.html</loc>
-    <lastmod>2026-01-13T00:31:51.644Z</lastmod>
+    <lastmod>2026-01-13T08:04:58.153Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ramanujraman.github.io/Notes/cQED/purcell_filter.html</loc>
+    <lastmod>2026-01-13T14:33:00.826Z</lastmod>
+  </url>
+  <url>
+    <loc>https://ramanujraman.github.io/notes.html</loc>
+    <lastmod>2026-01-13T08:24:44.801Z</lastmod>
   </url>
   <url>
     <loc>https://ramanujraman.github.io/index.html</loc>
     <lastmod>2026-01-13T01:27:22.207Z</lastmod>
-  </url>
-  <url>
-    <loc>https://ramanujraman.github.io/notes.html</loc>
-    <lastmod>2026-01-12T21:55:19.303Z</lastmod>
   </url>
   <url>
     <loc>https://ramanujraman.github.io/Notes/quantum_mechanics.html</loc>

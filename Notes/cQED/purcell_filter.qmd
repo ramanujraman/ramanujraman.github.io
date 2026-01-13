@@ -1,0 +1,51 @@
+---
+title: Purcell Filter
+author: Ramanuj Raman
+date: last-modified
+format:
+  html:
+    number-sections: true
+    toc: true
+    toc-depth: 3
+  typst:
+    number-sections: true
+---
+## Motivation
+In circuit QED, the qubit is coupled to a readout resonator which is in turn coupled to a transmission line. This coupling allows for interaction of the qubit with field around and sends away it's information to the measurement apparatus, FPGAs in our case. However, this coupling is dispersive in nature and lead to unwanted decay of qubit state via the resonator, known as Purcell decay. To mitigate this we use a Purcell filter, obviously.
+The system hamiltonian is given by
+$$
+H = (\omega_r + \chi \sigma_z) a^\dagger a + \frac{\omega_q}{2}\sigma_z
+$${#eq-disp-ham}
+where $\chi = \frac{g^2}{\Delta}$ is the dispersive shift which is the amount by which the resonator frequency shifts depending on the qubit state. We exploit this shift to tell the qubit state. But the problem is the readout resonator decays into the transmission line with a rate $\kappa_r$, this is essentially in some sense the rate at which information about the qubit state is gained. This decay also opens up a decay channel for the qubit via the resonator given as $a \to a-\frac{g}{\Delta} \sigma_{-}$. This leads to an effective decay rate of the qubit given by $\kappa (\frac{g}{\Delta})^2$.\
+Now the possible way out of this decay problem is:
+
+- Increase $\Delta$: But this reduces $\chi$ and hence the readout fidelity.
+- Decrease $\kappa_r$: But this increases the readout time and hence reduces the measurement bandwidth.
+- Decrease $g$: But this again reduces $\chi$ and hence the readout fidelity.
+
+Now another way forward is to somehow have different rates for resonator and qubit. This is where the Purcell filter comes in.
+
+## Circuit Diagram and Hamiltonian
+
+::: {#fig-elephants layout-ncol=1}
+
+![](Notes-figs/Purcell_Filter_circuit.png)
+
+Circuit Diagram of a qubit coupled to a readout resonator which is in turn coupled to a Purcell filter and then to the transmission line
+:::
+
+Consider the hamiltonian of coupled-resonators and qubit system given by
+$$
+\hat{H} = \omega_r a^\dagger a + \omega_f b^\dagger b + G^{*} a b^\dagger + G a^\dagger b + \omega_q \sigma_{+}\sigma_{-} + g(a \sigma_{+} + a^\dagger \sigma_{-})
+$${#eq-purc-ham}
+The above is the circuit diagram and hamiltonian which we'll be using to understand the dyanmics of the field first using semiclassical analysis and then using quantum treatment.
+
+## Semiclassical Analysis of Purcell Filter
+
+Now by looking at the resonator field evolution ($\hat{a}$) and filter field evolution ($\hat{b}$) in the rotating frame at the drive frequency,$e^{i \omega_d t}$ then the langevin equation in the semi-classical limit is given by
+$$
+\dot{\alpha} = -i \Delta_{rd} \alpha - i G \beta - i g \epsilon_r
+$$
+$$
+\dot{\beta} = -i \Delta_{fd} \beta - i G^{*} \alpha - \frac{\kappa_f}{2} \beta
+$$

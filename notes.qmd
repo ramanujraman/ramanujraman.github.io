@@ -4,3 +4,8 @@ title: Physics Notes
 
 ## Quantum Mechanics
 - [Quantum States and Measurements](Notes/quantum_mechanics.qmd)
+
+## Circuit Quantum Electrodynamics (cQED)
+- Light-Matter Interaction in cQED
+- Dispersive Readout in cQED
+- [Purcell Filter](Notes/cQED/purcell_filter.qmd)
