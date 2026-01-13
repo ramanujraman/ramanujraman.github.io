@@ -97,6 +97,7 @@ window.Quarto = {
 };
 </script>
 
+<link rel="stylesheet" href="../styles.css">
 </head>
 
 <body class="nav-fixed">
@@ -140,8 +141,8 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation"><span class="header-section-number">1</span> Motivation</a></li>
-  <li><a href="#lindblad-master-equation" id="toc-lindblad-master-equation" class="nav-link" data-scroll-target="#lindblad-master-equation"><span class="header-section-number">2</span> Lindblad Master Equation</a></li>
+  <li><a href="#motivation" id="toc-motivation" class="nav-link active" data-scroll-target="#motivation">Motivation</a></li>
+  <li><a href="#lindblad-master-equation" id="toc-lindblad-master-equation" class="nav-link" data-scroll-target="#lindblad-master-equation">Lindblad Master Equation</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="quantum_mechanics.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
     </div>
@@ -167,12 +168,12 @@ window.Quarto = {
 </header>
 
 
-<section id="motivation" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="motivation"><span class="header-section-number">1</span> Motivation</h2>
+<section id="motivation" class="level2">
+<h2 class="anchored" data-anchor-id="motivation">Motivation</h2>
 <p>Realistic quantum systems are never perfectly isolated and must be described using density matrices.</p>
 </section>
-<section id="lindblad-master-equation" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="lindblad-master-equation"><span class="header-section-number">2</span> Lindblad Master Equation</h2>
+<section id="lindblad-master-equation" class="level2">
+<h2 class="anchored" data-anchor-id="lindblad-master-equation">Lindblad Master Equation</h2>
 <p><span id="eq-cqed-ham"><span class="math display">\[
 H = \omega_r a^\dagger a + \frac{\omega_q}{2}\sigma_z
 \tag{1}\]</span></span></p>
@@ -272,7 +273,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/ramanujraman\.github\.io\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

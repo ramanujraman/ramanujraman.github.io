@@ -139,8 +139,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><img src="assets/IMG_0246.jpeg" class="float-right img-fluid" width="200"> Hi there! I’m Ramanuj Raman, a physics enthusiast with a keen interest in every problem of physics I can get my hands on. Currently, I am pursuing my Int-BSMS at the Indian Institute of Science Education and Research (IISER) Mohali. I am in my final year and working on my master’s thesis on <strong>Error Budget in Dispersive Readout</strong> at PGI-8 (Instiute for Quantum Control), at Forschungszentrum Jülich, Germany, under the supervision of Prof.&nbsp;Dr.&nbsp;Felix Motzoi and Dr.&nbsp;F.A. Cardenas Lopéz.<br>
-<img src="assets/IMG_0277.jpeg" class="float-left img-fluid" width="200"> Before this I have worked on projects related to light-matter interaction including Jaynes-Cummings, Electromagnetically Induced Transparency, simulation of phases of matter in Bose-Hubbard models, understanding topological phenomena in the SSH model and Kitaev chain.<br>
+<p><img src="assets/IMG_0246.jpeg" class="float-right img-fluid" style="width:5cm"> Hi there! I’m Ramanuj Raman, a physics enthusiast with a keen interest in every problem of physics I can get my hands on. Currently, I am pursuing my Int-BSMS at the Indian Institute of Science Education and Research (IISER) Mohali. I am in my final year and working on my master’s thesis on <strong>Error Budget in Dispersive Readout</strong> at PGI-8 (Instiute for Quantum Control), at Forschungszentrum Jülich, Germany, under the supervision of Prof.&nbsp;Dr.&nbsp;Felix Motzoi and Dr.&nbsp;F.A. Cardenas Lopéz.<br>
+<img src="assets/IMG_0277.jpeg" class="float-left img-fluid" style="width:5cm"> Before this I have worked on projects related to light-matter interaction including Jaynes-Cummings, Electromagnetically Induced Transparency, simulation of phases of matter in Bose-Hubbard models, understanding topological phenomena in the SSH model and Kitaev chain.<br>
 My current interests lie in using techniques from quantum information theory to understand condensed matter systems, and in exploring quantum control methods to improve qubit readout and gate fidelities.<br>
 Apart from physics, I enjoy coding, photography, philosophy and writing poems. I have experience working with julia and python for simulations of quantum system and other physical systems in general. I also like to teach and solve problems which has lead me run a semi-active youtube channel <a href="https://youtube.com/@r2e_?si=35W1omgmFOPEemBV">R2E</a> and I also like to talk to fellow physicist on problems and there prespectives on things.<br>
 <em>Feel free to explore my <a href="./notes.html">notes</a> and <a href="./blogs.html">blogs</a> to learn more about my work and thoughts. If you want more about my professional experience please look at my CV <a href="assets/Ramanuj_CV.pdf">here</a></em><br>
@@ -252,7 +252,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
+      var filterRegex = new RegExp("https:\/\/ramanujraman\.github\.io\/");
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }

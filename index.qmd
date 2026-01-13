@@ -1,12 +1,12 @@
 ---
 title: Welcome to Ramanuj's World
 ---
-![](assets/IMG_0246.jpeg){width=200px .float-right}
+![](assets/IMG_0246.jpeg){width=5cm .float-right}
 Hi there! I'm Ramanuj Raman, a physics enthusiast with a keen interest in every problem of physics I can get my hands on.
 Currently, I am pursuing my Int-BSMS at the Indian Institute of Science Education and Research (IISER) Mohali. I am in my
  final year and working on my master's thesis on **Error Budget in Dispersive Readout** at PGI-8 (Instiute for Quantum
  Control), at Forschungszentrum Jülich, Germany, under the supervision of Prof. Dr. Felix Motzoi and Dr. F.A. Cardenas Lopéz.\
-![](assets/IMG_0277.jpeg){width=200px .float-left}
+![](assets/IMG_0277.jpeg){width=5cm .float-left}
 Before this I have worked on projects related to light-matter interaction including Jaynes-Cummings, Electromagnetically Induced
 Transparency, simulation of phases of matter in Bose-Hubbard models, understanding topological phenomena in the SSH model and
 Kitaev chain.\
