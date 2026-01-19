@@ -7,6 +7,62 @@
     "text": "Here are some ideas which are floating around in my head. They may or may not be fully formed, I may or may not pursue them, but I want to write them down before they are lost. These ideas could be related to physics, programming, or anything else that interests me. Feel free to reach out if any of these ideas resonate with you! and you want to discuss or collaborate on them."
   },
   {
+    "objectID": "Notes/QM/Angular_momentum.html#rotations-and-angular-momentum-commutation-relations",
+    "href": "Notes/QM/Angular_momentum.html#rotations-and-angular-momentum-commutation-relations",
+    "title": "Theory of Angular Momentum",
+    "section": "2 Rotations and Angular Momentum Commutation Relations",
+    "text": "2 Rotations and Angular Momentum Commutation Relations\nIn classical mechanics we cause rotation of a vector \\(\\vec{v}\\) by applying a rotation matrix \\(R\\) such that \\(\\vec{v'}=R \\vec{v}\\) where \\(\\vec{v'}\\) is the rotated vector. The rotation matrix is suppose to follow the following properties\n\n\\[R^{T}R = RR^{T} = I\\]\n\\[\\sqrt{v_x^2 + v_y^2 + v_z^2} = \\sqrt{v_x'^2 + v_y'^2 + v_z'^2}\\]\n\nNow in 3D we can generate all the rotations possible using 3 matricies around x,y and z axis using \\(R_x(\\phi)\\), \\(R_y(\\phi)\\) and \\(R_z(\\phi)\\). For very small angle \\(\\phi\\), the above matricies allow the commutation relation as \\([R_{x}(\\epsilon),R_{y}(\\epsilon)]= R_{z}(\\epsilon^2)-I\\)\n\n\n\n\n\n\nNote 1: Exercise\n\n\n\nGeneralise the above commuation relation.\n\n\nNow one of the important lessons of quantum mechanics is that we can rotate a physical system in \\(\\mathrm{R}^{3}\\) then there should be a corresponding operator \\(\\mathcal{D}(R)\\) such that it rotates the wavefunction in the hilbert space \\(\\mathcal{H}\\) such that \\(|\\alpha\\rangle_{R}=\\mathcal{D}(R)|\\alpha\\rangle\\). And the physics in the rotated frame is given by \\(|\\alpha\\rangle_R\\).\n\n\n\n\n\n\nNote 2: Exercise\n\n\n\nShow that \\(\\mathcal{D}(R)\\) is an unitary operator.\n\n\nNow let us consider a unitary operator which generates the rotation and let \\(\\vec{J} \\cdot \\hat{n}\\) be the generator of the rotation where \\(\\vec{J} = \\{\\hat{J}_x, \\hat{J}_y, \\hat{J}_z\\}\\) and \\(\\hat{n}\\) is a unit vector in the direction of the rotation axis. So we can write the \\(\\mathcal{D}(R) = e^{-i \\vec{J} \\cdot \\hat{n} \\theta}\\). Now in the small angle approximation we have \\(\\mathcal{D}(R) = 1 - i \\vec{J} \\cdot \\hat{n} \\theta + \\mathcal{O}(\\theta^2)\\)"
+  },
+  {
+    "objectID": "Notes/QM/Angular_momentum.html#finite-rotation-in-quantum-mechanics",
+    "href": "Notes/QM/Angular_momentum.html#finite-rotation-in-quantum-mechanics",
+    "title": "Theory of Angular Momentum",
+    "section": "3 Finite Rotation in Quantum mechanics",
+    "text": "3 Finite Rotation in Quantum mechanics\nWe can re-write the rotation around an axis as compounding of multiple infinitesimal rotation around the axis as \\[\n\\mathcal{D}_z(\\phi) = \\lim_{N \\to \\infty} \\left(1 - i \\hat{J}_z \\frac{\\phi}{N}\\right)^N\n\\] which is \\[\n\\mathcal{D}_z(\\phi) = exp(-i \\hat{J}_z \\phi) = 1 - \\frac{i \\hat{J}_z \\phi}{\\hbar} - \\frac{ \\hat{J}_z^2 \\phi^2}{2 \\hbar^2} + \\mathcal{O}(\\phi^3)\n\\] Now let us try to figure-out the angular momentum algebra using the rotation operator. Now we assume that rotation operator have same group properties as the classical rotation matrices.\n\nIdentity: \\(R \\cdot I = I \\cdot R = R\\) \\(\\implies\\) \\(\\mathcal{D}(R) \\cdot I = I \\cdot \\mathcal{D}(R) = \\mathcal{D}(R)\\)\nClosure: \\(R_1 R_2 = R_3\\) \\(\\implies\\) \\(\\mathcal{D}(R_1) \\mathcal{D}(R_2) = \\mathcal{D}(R_3)\\)\nInverses: \\(R R^{-1} = R^{-1} R = I\\) \\(\\implies\\) \\(\\mathcal{D}(R) \\mathcal{D}(R)^{-1} = \\mathcal{D}(R)^{-1} \\mathcal{D}(R) = I\\)\nAssociativity: \\(R_1 (R_2 R_3) = (R_1 R_2) R_3\\) \\(\\implies\\) \\(\\mathcal{D}(R_1) (\\mathcal{D}(R_2) \\mathcal{D}(R_3)) = (\\mathcal{D}(R_1) \\mathcal{D}(R_2)) \\mathcal{D}(R_3)\\)\n\nNow using the commutation relation of classical rotaion matrix one can workout the commutation relation of the angular momentum operator.\n\n\n\n\n\n\nNote 3: Exercise\n\n\n\nWorkout the commutation relation of angular momentum operator using rotation operator commutation relation, which follows from the fact that they have same group structure.\n\n\nSo one of the central results of this section is the angular momentum algebra given as \\[\n[\\hat{J}_i,\\hat{J}_j] = i \\hbar \\epsilon_{ijk} \\hat{J}_k\n\\tag{1}\\]\nEquation 1 shows that the angular momentum operators forms an non-abelian group, which is different from the translation as the generators \\(p_{j}\\) form an abelian group. Now in principle I only need Equation 1 to give all the properties of angular momentum operator and hence rotation operators. But now the question is how the expectation values change with the rotation operator? Consider the expectation value \\(\\langle \\hat{J}_x \\rangle\\), it is defined as \\[\n\\langle \\hat{J}_x \\rangle = \\langle \\alpha_R | \\hat{J}_x |\\alpha_R\\rangle = \\langle \\alpha |\\mathcal{D}^{\\dagger}_z \\hat{J}_x \\mathcal{D}_z|\\alpha \\rangle\n\\] Now the let us see how \\(\\hat{J}_x\\) transform under the rotation around z-axis? \\[\n\\begin{aligned}\n\\mathcal{D}^{\\dagger}_z \\hat{J}_x \\mathcal{D}_z = e^{-i\\hat{J}_z\\phi} \\hat{J}_x e^{i\\hat{J}_z\\phi}\n&= 1 + \\left(\\frac{i \\phi}{\\hbar}\\right) [\\hat{J}_z,\\hat{J}_x] + \\frac{1}{2!} \\left(\\frac{i \\phi}{\\hbar}\\right)^2 [\\hat{J}_z,[\\hat{J}_z,\\hat{J}_x]]+....\\\\\n&= \\hat{J}_x \\cos(\\phi) - \\hat{J}_y \\sin(\\phi)\n\\end{aligned}\n\\] Now note that these operator transforms as a vector under rotation.\n\n\n\n\n\n\nNote 4: Exercise\n\n\n\nShow explicitly that angular momemtum operators along different axis transform as a vector under rotation."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "",
+    "text": "Hi there! I’m Ramanuj Raman, a physics enthusiast with a keen interest in every problem of physics I can get my hands on. Currently, I am pursuing my Int-BSMS at the Indian Institute of Science Education and Research (IISER) Mohali. I am in my final year and working on my master’s thesis on Error Budget in Dispersive Readout at PGI-8 (Instiute for Quantum Control), at Forschungszentrum Jülich, Germany, under the supervision of Prof. Dr. Felix Motzoi and Dr. F.A. Cardenas Lopéz.\n Before this I have worked on projects related to light-matter interaction including Jaynes-Cummings, Electromagnetically Induced Transparency, simulation of phases of matter in Bose-Hubbard models, understanding topological phenomena in the SSH model and Kitaev chain.\nMy current interests lie in using techniques from quantum information theory to understand condensed matter systems, and in exploring quantum control methods to improve qubit readout and gate fidelities.\nApart from physics, I enjoy coding, photography, philosophy and writing poems. I have experience working with julia and python for simulations of quantum system and other physical systems in general. I also like to teach and solve problems which has lead me run a semi-active youtube channel R2E and I also like to talk to fellow physicist on problems and there prespectives on things.\nFeel free to explore my notes and blogs to learn more about my work and thoughts. If you want more about my professional experience please look at my CV here"
+  },
+  {
+    "objectID": "index.html#update-log",
+    "href": "index.html#update-log",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "Update Log",
+    "text": "Update Log\n\n19 January 2026: Started on my notes for theory of angular momentum and purcell filter. Hope I’ll finish it … as soon as I can.\n12 January 2026: Redesigned the website layout for…idk fun I guess. Just kidding, I wanted a cleaner look and better way to organize and present my notes and blogs."
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "Contact",
+    "text": "Contact\n\n📧 Email: ramanujraman@icloud.com\n💼 LinkedIn: linkedin.com/in/ramanuj-raman"
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "Physics Notes",
+    "section": "",
+    "text": "Mathematical Foundation of Quantum Mechanics\nTheory of Angular Momentum"
+  },
+  {
+    "objectID": "notes.html#quantum-mechanics",
+    "href": "notes.html#quantum-mechanics",
+    "title": "Physics Notes",
+    "section": "",
+    "text": "Mathematical Foundation of Quantum Mechanics\nTheory of Angular Momentum"
+  },
+  {
+    "objectID": "notes.html#circuit-quantum-electrodynamics-cqed",
+    "href": "notes.html#circuit-quantum-electrodynamics-cqed",
+    "title": "Physics Notes",
+    "section": "Circuit Quantum Electrodynamics (cQED)",
+    "text": "Circuit Quantum Electrodynamics (cQED)\n\nLight-Matter Interaction in cQED\nDispersive Readout in cQED\nPurcell Filter"
+  },
+  {
     "objectID": "Notes/cQED/purcell_filter.html",
     "href": "Notes/cQED/purcell_filter.html",
     "title": "Purcell Filter",
@@ -33,68 +89,5 @@
     "title": "Purcell Filter",
     "section": "3 Semiclassical Analysis of Purcell Filter",
     "text": "3 Semiclassical Analysis of Purcell Filter\nNow by looking at the resonator field evolution (\\(\\hat{a}\\)) and filter field evolution (\\(\\hat{b}\\)) in the rotating frame at the drive frequency,\\(e^{i \\omega_d t}\\) then the langevin equation in the semi-classical limit is given by \\[\n\\dot{\\alpha} = -i \\Delta_{rd} \\alpha - i G \\beta - i g \\epsilon_r\n\\] \\[\n\\dot{\\beta} = -i \\Delta_{fd} \\beta - i G^{*} \\alpha - \\frac{\\kappa_f}{2} \\beta\n\\]"
-  },
-  {
-    "objectID": "notes.html",
-    "href": "notes.html",
-    "title": "Physics Notes",
-    "section": "",
-    "text": "Quantum States and Measurements"
-  },
-  {
-    "objectID": "notes.html#quantum-mechanics",
-    "href": "notes.html#quantum-mechanics",
-    "title": "Physics Notes",
-    "section": "",
-    "text": "Quantum States and Measurements"
-  },
-  {
-    "objectID": "notes.html#circuit-quantum-electrodynamics-cqed",
-    "href": "notes.html#circuit-quantum-electrodynamics-cqed",
-    "title": "Physics Notes",
-    "section": "Circuit Quantum Electrodynamics (cQED)",
-    "text": "Circuit Quantum Electrodynamics (cQED)\n\nLight-Matter Interaction in cQED\nDispersive Readout in cQED\nPurcell Filter"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to Ramanuj’s World",
-    "section": "",
-    "text": "Hi there! I’m Ramanuj Raman, a physics enthusiast with a keen interest in every problem of physics I can get my hands on. Currently, I am pursuing my Int-BSMS at the Indian Institute of Science Education and Research (IISER) Mohali. I am in my final year and working on my master’s thesis on Error Budget in Dispersive Readout at PGI-8 (Instiute for Quantum Control), at Forschungszentrum Jülich, Germany, under the supervision of Prof. Dr. Felix Motzoi and Dr. F.A. Cardenas Lopéz.\n Before this I have worked on projects related to light-matter interaction including Jaynes-Cummings, Electromagnetically Induced Transparency, simulation of phases of matter in Bose-Hubbard models, understanding topological phenomena in the SSH model and Kitaev chain.\nMy current interests lie in using techniques from quantum information theory to understand condensed matter systems, and in exploring quantum control methods to improve qubit readout and gate fidelities.\nApart from physics, I enjoy coding, photography, philosophy and writing poems. I have experience working with julia and python for simulations of quantum system and other physical systems in general. I also like to teach and solve problems which has lead me run a semi-active youtube channel R2E and I also like to talk to fellow physicist on problems and there prespectives on things.\nFeel free to explore my notes and blogs to learn more about my work and thoughts. If you want more about my professional experience please look at my CV here"
-  },
-  {
-    "objectID": "index.html#update-log",
-    "href": "index.html#update-log",
-    "title": "Welcome to Ramanuj’s World",
-    "section": "Update Log",
-    "text": "Update Log\n\n12 January 2026: Redesigned the website layout for…idk fun I guess. Just kidding, I wanted a cleaner look and better way to organize and present my notes and blogs."
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "Welcome to Ramanuj’s World",
-    "section": "Contact",
-    "text": "Contact\n\n📧 Email: ramanujraman@icloud.com\n💼 LinkedIn: linkedin.com/in/ramanuj-raman"
-  },
-  {
-    "objectID": "Notes/quantum_mechanics.html",
-    "href": "Notes/quantum_mechanics.html",
-    "title": "Open Quantum Systems",
-    "section": "",
-    "text": "Realistic quantum systems are never perfectly isolated and must be described using density matrices."
-  },
-  {
-    "objectID": "Notes/quantum_mechanics.html#motivation",
-    "href": "Notes/quantum_mechanics.html#motivation",
-    "title": "Open Quantum Systems",
-    "section": "",
-    "text": "Realistic quantum systems are never perfectly isolated and must be described using density matrices."
-  },
-  {
-    "objectID": "Notes/quantum_mechanics.html#lindblad-master-equation",
-    "href": "Notes/quantum_mechanics.html#lindblad-master-equation",
-    "title": "Open Quantum Systems",
-    "section": "Lindblad Master Equation",
-    "text": "Lindblad Master Equation\n\\[\nH = \\omega_r a^\\dagger a + \\frac{\\omega_q}{2}\\sigma_z\n\\tag{1}\\]\nSee Equation 1."
   }
 ]
