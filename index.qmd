@@ -20,6 +20,7 @@ and there prespectives on things.\
 professional experience please look at my CV [here](assets/Ramanuj_CV.pdf)*\
 
 ## Update Log
+- **19 January 2026:** Started on my notes for theory of angular momentum and purcell filter. Hope I'll finish it ... as soon as I can.
 - **12 January 2026:** Redesigned the website layout for...idk fun I guess. Just kidding, I wanted a cleaner look and better way to organize
   and present my notes and blogs.
 

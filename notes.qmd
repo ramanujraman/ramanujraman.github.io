@@ -3,7 +3,8 @@ title: Physics Notes
 ---
 
 ## Quantum Mechanics
-- [Quantum States and Measurements](Notes/quantum_mechanics.qmd)
+- [Mathematical Foundation of Quantum Mechanics](Notes/QM/math_fonds_qm.qmd)
+- [Theory of Angular Momentum](Notes/QM/Angular_momentum.qmd)
 
 ## Circuit Quantum Electrodynamics (cQED)
 - Light-Matter Interaction in cQED

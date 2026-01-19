@@ -1,0 +1,13 @@
+---
+title: Mathematical Foundation of Quantum Mechanics
+author: Ramanuj Raman
+date: last-modified
+format:
+  html:
+    number-sections: true
+    toc: true
+    toc-depth: 3
+  typst:
+    number-sections: true
+---
+## Will Be Added Soon

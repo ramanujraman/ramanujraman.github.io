@@ -1,0 +1,94 @@
+---
+title: Theory of Angular Momentum
+author: Ramanuj Raman
+date: last-modified
+format:
+  html:
+    number-sections: true
+    toc: true
+    toc-depth: 3
+  typst:
+    number-sections: true
+---
+## Introduction
+
+## Rotations and Angular Momentum Commutation Relations
+In classical mechanics we cause rotation of a vector $\vec{v}$ by applying a rotation matrix $R$ such that $\vec{v'}=R \vec{v}$ where
+$\vec{v'}$ is the rotated vector. The rotation matrix is suppose to follow the following properties
+
+- $$R^{T}R = RR^{T} = I$$
+- $$\sqrt{v_x^2 + v_y^2 + v_z^2} = \sqrt{v_x'^2 + v_y'^2 + v_z'^2}$$
+
+Now in 3D we can generate all the rotations possible using 3 matricies around x,y and z axis using $R_x(\phi)$, $R_y(\phi)$ and $R_z(\phi)$.
+For very small angle $\phi$, the above matricies allow the commutation relation as $[R_{x}(\epsilon),R_{y}(\epsilon)]= R_{z}(\epsilon^2)-I$
+
+::: {#tip-classical-comm-exer .callout-note}
+## Exercise
+Generalise the above commuation relation.
+:::
+
+Now one of the important lessons of quantum mechanics is that we can rotate a physical system in $\mathrm{R}^{3}$ then there should be a
+corresponding operator $\mathcal{D}(R)$ such that it rotates the wavefunction in the hilbert space $\mathcal{H}$ such that
+$|\alpha\rangle_{R}=\mathcal{D}(R)|\alpha\rangle$. And the *physics* in the rotated frame is given by $|\alpha\rangle_R$.
+
+::: {#tip-rot-op-unit .callout-note}
+## Exercise
+Show that $\mathcal{D}(R)$ is an unitary operator.
+:::
+
+Now let us consider a unitary operator which generates the rotation and let $\vec{J} \cdot \hat{n}$ be the generator of the rotation where
+$\vec{J} = \{\hat{J}_x, \hat{J}_y, \hat{J}_z\}$ and $\hat{n}$ is a unit vector in the direction of the rotation axis. So we can write the
+$\mathcal{D}(R) = e^{-i \vec{J} \cdot \hat{n} \theta}$. Now in the small angle approximation we have
+$\mathcal{D}(R) = 1 - i \vec{J} \cdot \hat{n} \theta + \mathcal{O}(\theta^2)$
+
+## Finite Rotation in Quantum mechanics
+We can re-write the rotation around an axis as compounding of multiple infinitesimal rotation around the axis as
+$$
+\mathcal{D}_z(\phi) = \lim_{N \to \infty} \left(1 - i \hat{J}_z \frac{\phi}{N}\right)^N
+$$
+which is
+$$
+\mathcal{D}_z(\phi) = exp(-i \hat{J}_z \phi) = 1 - \frac{i \hat{J}_z \phi}{\hbar} - \frac{ \hat{J}_z^2 \phi^2}{2 \hbar^2} + \mathcal{O}(\phi^3)
+$$
+Now let us try to figure-out the angular momentum algebra using the rotation operator. Now we assume that rotation operator have same group
+properties as the classical rotation matrices.
+
+1. Identity: $R \cdot I = I \cdot R = R$ $\implies$ $\mathcal{D}(R) \cdot I = I \cdot \mathcal{D}(R) = \mathcal{D}(R)$
+2. Closure: $R_1 R_2 = R_3$ $\implies$ $\mathcal{D}(R_1) \mathcal{D}(R_2) = \mathcal{D}(R_3)$
+3. Inverses: $R R^{-1} = R^{-1} R = I$ $\implies$ $\mathcal{D}(R) \mathcal{D}(R)^{-1} = \mathcal{D}(R)^{-1} \mathcal{D}(R) = I$
+4. Associativity: $R_1 (R_2 R_3) = (R_1 R_2) R_3$ $\implies$ $\mathcal{D}(R_1) (\mathcal{D}(R_2) \mathcal{D}(R_3)) = (\mathcal{D}(R_1) \mathcal{D}(R_2)) \mathcal{D}(R_3)$
+
+Now using the commutation relation of classical rotaion matrix one can workout the commutation relation of the angular momentum operator.
+
+::: {#tip-angular-ops-comm .callout-note}
+## Exercise
+Workout the commutation relation of angular momentum operator using rotation operator commutation relation, which follows from the fact that
+they have same group structure.
+:::
+
+So one of the central results of this section is the angular momentum algebra given as
+$$
+[\hat{J}_i,\hat{J}_j] = i \hbar \epsilon_{ijk} \hat{J}_k
+$${#eq-ang-mom-comm}
+
+@eq-ang-mom-comm shows that the angular momentum operators forms an **non-abelian group**, which is different from the translation
+as the generators $p_{j}$ form an **abelian group**. Now in principle I only need @eq-ang-mom-comm to give all the properties of
+angular momentum operator and hence rotation operators. But now the question is how the expectation values change with the rotation operator?
+Consider the expectation value $\langle \hat{J}_x \rangle$, it is defined as
+$$
+\langle \hat{J}_x \rangle = \langle \alpha_R | \hat{J}_x |\alpha_R\rangle = \langle \alpha |\mathcal{D}^{\dagger}_z \hat{J}_x \mathcal{D}_z|\alpha \rangle
+$$
+Now the let us see how $\hat{J}_x$ transform under the rotation around z-axis?
+$$
+\begin{aligned}
+\mathcal{D}^{\dagger}_z \hat{J}_x \mathcal{D}_z = e^{-i\hat{J}_z\phi} \hat{J}_x e^{i\hat{J}_z\phi}
+&= 1 + \left(\frac{i \phi}{\hbar}\right) [\hat{J}_z,\hat{J}_x] + \frac{1}{2!} \left(\frac{i \phi}{\hbar}\right)^2 [\hat{J}_z,[\hat{J}_z,\hat{J}_x]]+....\\
+&= \hat{J}_x \cos(\phi) - \hat{J}_y \sin(\phi)
+\end{aligned}
+$$
+Now note that these operator transforms as a vector under rotation.
+
+::: {#tip-ang-ops-r-vec .callout-note}
+## Exercise
+Show explicitly that angular momemtum operators along different axis transform as a vector under rotation.
+:::
