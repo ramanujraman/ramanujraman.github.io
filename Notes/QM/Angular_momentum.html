@@ -146,6 +146,10 @@ window.Quarto = {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
   <li><a href="#rotations-and-angular-momentum-commutation-relations" id="toc-rotations-and-angular-momentum-commutation-relations" class="nav-link" data-scroll-target="#rotations-and-angular-momentum-commutation-relations"><span class="header-section-number">2</span> Rotations and Angular Momentum Commutation Relations</a></li>
   <li><a href="#finite-rotation-in-quantum-mechanics" id="toc-finite-rotation-in-quantum-mechanics" class="nav-link" data-scroll-target="#finite-rotation-in-quantum-mechanics"><span class="header-section-number">3</span> Finite Rotation in Quantum mechanics</a></li>
+  <li><a href="#spin-frac12-systems-and-finite-rotations" id="toc-spin-frac12-systems-and-finite-rotations" class="nav-link" data-scroll-target="#spin-frac12-systems-and-finite-rotations"><span class="header-section-number">4</span> Spin-<span class="math inline">\(\frac{1}{2}\)</span> Systems and Finite Rotations</a>
+  <ul class="collapse">
+  <li><a href="#neutron-interferometry-experiment" id="toc-neutron-interferometry-experiment" class="nav-link" data-scroll-target="#neutron-interferometry-experiment"><span class="header-section-number">4.1</span> Neutron Interferometry Experiment</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Angular_momentum.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
     </div>
@@ -275,8 +279,55 @@ Note&nbsp;4: Exercise
 <p>Show explicitly that angular momemtum operators along different axis transform as a vector under rotation.</p>
 </div>
 </div>
+</section>
+<section id="spin-frac12-systems-and-finite-rotations" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="spin-frac12-systems-and-finite-rotations"><span class="header-section-number">4</span> Spin-<span class="math inline">\(\frac{1}{2}\)</span> Systems and Finite Rotations</h2>
+<p>The lowest number,N, of dimensions in which the the angular momentum commutation in <a href="#eq-ang-mom-comm" class="quarto-xref">Equation&nbsp;1</a> are realised is <span class="math inline">\(N=2\)</span>. Now the generators of the rotation for <span class="math inline">\(N=2\)</span> which satisfy the commutation relation are <span id="eq-sigma-x"><span class="math display">\[
+\sigma_{x} = \begin{pmatrix}
+0 &amp; 1 \\
+1 &amp; 0
+\end{pmatrix}
+\tag{2}\]</span></span></p>
+<p><span id="eq-sigma-y"><span class="math display">\[
+\sigma_{y} = \begin{pmatrix}
+0 &amp; -i \\
+i &amp; 0
+\end{pmatrix}
+\tag{3}\]</span></span></p>
+<p><span id="eq-sigma-z"><span class="math display">\[
+\sigma_{z} = \begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix}
+\tag{4}\]</span></span></p>
+<p>and to make sure the dimensions are satisfied we’ll add and extra <span class="math inline">\(\frac{\hbar}{2}\)</span> in front of all of them and they are generator of rotation for spin-<span class="math inline">\(\frac{1}{2}\)</span> particles. Now like showed in the earlier section that the expectation values transform as vector. Let us consider the transformation of a expectation value of spin-<span class="math inline">\(\frac{1}{2}\)</span> matrices around z-axis as, <span id="eq-rot-transform-spin-matrix"><span class="math display">\[
+\begin{pmatrix}
+\cos(\phi) &amp; -\sin(\phi) &amp; 0 \\
+\sin(\phi) &amp; \cos(\phi) &amp; 0 \\
+0 &amp; 0 &amp; 1
+\end{pmatrix}
+\begin{pmatrix}
+\langle \hat{S}_x \rangle \\
+\langle \hat{S}_y \rangle \\
+\langle \hat{S}_z \rangle
+\end{pmatrix}
+=
+\begin{pmatrix}
+\langle \hat{S}_x \rangle \cos(\phi) - \langle \hat{S}_y \rangle \sin(\phi) \\
+\langle \hat{S}_x \rangle \sin(\phi) + \langle \hat{S}_y \rangle \cos(\phi) \\
+\langle \hat{S}_z \rangle
+\end{pmatrix}
+\tag{5}\]</span></span> Now the above can be extended to any angular momemtum operator <span class="math inline">\(\hat{J}_{i}\)</span> as <span class="math inline">\(\hat{J}'_{j} = R_{ji} \hat{J}_{i}\)</span>. But how a general ket <span class="math inline">\(|\alpha\rangle\)</span> is transformed under rotation, <span class="math display">\[
+\begin{aligned}
+e^{-i \hat{J}_z \phi / \hbar} |\alpha\rangle &amp;= e^{-i \hat{J}_z \phi / \hbar}(|0\rangle \langle0|\alpha\rangle + |1\rangle \langle1|\alpha\rangle)\\
+&amp;= (e^{-i \phi/2}|0\rangle \langle0|\alpha\rangle + e^{i \phi/2}|1\rangle \langle1|\alpha\rangle)
+\end{aligned}
+\]</span> Now for <span class="math inline">\(\phi=2\pi\)</span>, <span class="math inline">\(|\alpha\rangle_{R_{z}(2\pi)} = -|\alpha\rangle\)</span>. This is the most astonishing result that after a <span class="math inline">\(2\pi\)</span> rotation one pick up a negative sign and in principle it takes two <span class="math inline">\(2\pi\)</span> rotations to return to the original state. But in quantum theory we only measure the expectation value of operators and the phase becomes irrevelant so how we detect the sign?</p>
+<section id="neutron-interferometry-experiment" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="neutron-interferometry-experiment"><span class="header-section-number">4.1</span> Neutron Interferometry Experiment</h3>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
