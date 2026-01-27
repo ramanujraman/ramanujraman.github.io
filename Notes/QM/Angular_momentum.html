@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ramanuj Raman">
-<meta name="dcterms.date" content="2026-01-20">
+<meta name="dcterms.date" content="2026-01-28">
 
 <title>Theory of Angular Momentum – Ramanuj Raman</title>
 <style>
@@ -146,7 +146,12 @@ window.Quarto = {
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
   <li><a href="#rotations-and-angular-momentum-commutation-relations" id="toc-rotations-and-angular-momentum-commutation-relations" class="nav-link" data-scroll-target="#rotations-and-angular-momentum-commutation-relations"><span class="header-section-number">2</span> Rotations and Angular Momentum Commutation Relations</a></li>
   <li><a href="#finite-rotation-in-quantum-mechanics" id="toc-finite-rotation-in-quantum-mechanics" class="nav-link" data-scroll-target="#finite-rotation-in-quantum-mechanics"><span class="header-section-number">3</span> Finite Rotation in Quantum mechanics</a></li>
-  <li><a href="#spin-frac12-systems-and-finite-rotations" id="toc-spin-frac12-systems-and-finite-rotations" class="nav-link" data-scroll-target="#spin-frac12-systems-and-finite-rotations"><span class="header-section-number">4</span> Spin-<span class="math inline">\(\frac{1}{2}\)</span> Systems and Finite Rotations</a></li>
+  <li><a href="#spin-frac12-systems-and-finite-rotations" id="toc-spin-frac12-systems-and-finite-rotations" class="nav-link" data-scroll-target="#spin-frac12-systems-and-finite-rotations"><span class="header-section-number">4</span> Spin-<span class="math inline">\(\frac{1}{2}\)</span> Systems and Finite Rotations</a>
+  <ul class="collapse">
+  <li><a href="#pauli-two-component-formalism" id="toc-pauli-two-component-formalism" class="nav-link" data-scroll-target="#pauli-two-component-formalism"><span class="header-section-number">4.1</span> Pauli Two Component Formalism</a></li>
+  <li><a href="#rotation-in-two-component-formalism" id="toc-rotation-in-two-component-formalism" class="nav-link" data-scroll-target="#rotation-in-two-component-formalism"><span class="header-section-number">4.2</span> Rotation in Two Component Formalism</a></li>
+  </ul></li>
+  <li><a href="#eigenvalues-and-eigenvectors-of-angular-momentum" id="toc-eigenvalues-and-eigenvectors-of-angular-momentum" class="nav-link" data-scroll-target="#eigenvalues-and-eigenvectors-of-angular-momentum"><span class="header-section-number">5</span> Eigenvalues and Eigenvectors of Angular Momentum</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Angular_momentum.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
     </div>
@@ -172,7 +177,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 20, 2026</p>
+      <p class="date">January 28, 2026</p>
     </div>
   </div>
   
@@ -320,6 +325,130 @@ e^{-i \hat{J}_z \phi / \hbar} |\alpha\rangle &amp;= e^{-i \hat{J}_z \phi / \hbar
 &amp;= (e^{-i \phi/2}|0\rangle \langle0|\alpha\rangle + e^{i \phi/2}|1\rangle \langle1|\alpha\rangle)
 \end{aligned}
 \]</span> Now for <span class="math inline">\(\phi=2\pi\)</span>, <span class="math inline">\(|\alpha\rangle_{R_{z}(2\pi)} = -|\alpha\rangle\)</span>. This is the most astonishing result that after a <span class="math inline">\(2\pi\)</span> rotation one pick up a negative sign and in principle it takes two <span class="math inline">\(2\pi\)</span> rotations to return to the original state. But in quantum theory we only measure the expectation value of operators and the phase becomes irrevelant so how we detect the sign?</p>
+<section id="pauli-two-component-formalism" class="level3" data-number="4.1">
+<h3 data-number="4.1" class="anchored" data-anchor-id="pauli-two-component-formalism"><span class="header-section-number">4.1</span> Pauli Two Component Formalism</h3>
+<p>Introduced by Wolfgag Pauli in 1927, the two component formalism is a way to represent spin-<span class="math inline">\(\frac{1}{2}\)</span> particles using two component spinors, which becomes more apparent when we consider the full relativistic treatment. As we understood in earlier sections that vectors can be represented using column matrix depending upon the dimensions of the hilbert space. So for spin-<span class="math inline">\(\frac{1}{2}\)</span> particle state can be represented as <span class="math display">\[
+|0\rangle = \begin{pmatrix}
+1 \\
+0
+\end{pmatrix}
+\]</span> and <span class="math display">\[
+|1\rangle = \begin{pmatrix}
+0 \\
+1
+\end{pmatrix}
+\]</span> and any vector can be written as <span class="math display">\[
+|\alpha \rangle = |0\rangle\langle 0|\alpha \rangle + |1\rangle \langle 1|\alpha \rangle = \begin{pmatrix}
+c_0 \\
+c_1
+\end{pmatrix}
+\]</span> and <span class="math display">\[
+\langle \alpha| = \langle \alpha|0\rangle \langle 0| + \langle \alpha|1\rangle \langle 1| = \begin{pmatrix}
+c_0^* &amp; c_1^*
+\end{pmatrix}
+\]</span> where <span class="math inline">\(c_0 = \langle 0|\alpha \rangle\)</span> and <span class="math inline">\(c_1 = \langle 1|\alpha \rangle\)</span>. Now, we can represent the pauli matrices using two component formalism as <span class="math display">\[
+\sigma_{x} = |0\rangle \langle 1| + |1\rangle \langle 0| = \begin{pmatrix}
+0 &amp; 1 \\
+1 &amp; 0
+\end{pmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\sigma_{y} = -i|0\rangle \langle 1| + i|1\rangle \langle 0| = \begin{pmatrix}
+0 &amp; -i \\
+i &amp; 0
+\end{pmatrix}
+\]</span></p>
+<p><span class="math display">\[
+\sigma_{z} = |0\rangle \langle 0| - |1\rangle \langle 1| = \begin{pmatrix}
+1 &amp; 0 \\
+0 &amp; -1
+\end{pmatrix}
+\]</span></p>
+<section id="some-properties-of-pauli-matrices" class="level4" data-number="4.1.1">
+<h4 data-number="4.1.1" class="anchored" data-anchor-id="some-properties-of-pauli-matrices"><span class="header-section-number">4.1.1</span> Some Properties of Pauli Matrices</h4>
+<ol type="1">
+<li>Hermitian: <span class="math inline">\(\sigma_{i}^{\dagger} = \sigma_{i}\)</span></li>
+<li>Unitary: <span class="math inline">\(\sigma_{i}^{\dagger} = \sigma_{i}\)</span></li>
+<li>Traceless: <span class="math inline">\(Tr(\sigma_{i}) = 0\)</span></li>
+<li>Determinant: <span class="math inline">\(det(\sigma_{i}) = -1\)</span></li>
+<li>Commutation Relation: <span class="math inline">\([\sigma_{i},\sigma_{j}] = 2i \epsilon_{ijk} \sigma_{k}\)</span></li>
+<li>Anticommutation Relation: <span class="math inline">\(\{\sigma_{i},\sigma_{j}\} = 2 \delta_{ij} I\)</span></li>
+<li>Squared: <span class="math inline">\(\sigma_{i}^2 = I\)</span></li>
+</ol>
+<div id="tip-pauli-props" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;5: Exercise
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Prove the above properties of pauli matrices.</p>
+</div>
+</div>
+<p>Now consider <span class="math inline">\(\vec{a}\cdot\vec{\sigma}\)</span> where <span class="math inline">\(\vec{a}\)</span> is a vector and <span class="math inline">\(\vec{\sigma} = (\sigma_{x},\sigma_{y},\sigma_{z})\)</span>. We can show that <span class="math display">\[
+\vec{a}\cdot \vec{\sigma} = a_k \sigma_k = \begin{pmatrix}
+a_z &amp; a_x - i a_y \\
+a_x + i a_y &amp; -a_z
+\end{pmatrix}
+\]</span> Now we’ll show a very important identity which will be much useful later,</p>
+<div id="tip-pauli-identity" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;6: Theorem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span class="math display">\[
+(\vec{\sigma}\cdot\vec{a})(\vec{\sigma}\cdot\vec{b}) = \vec{a}\cdot\vec{b} I + i \vec{\sigma} \cdot (\vec{a} \times \vec{b})
+\]</span></p>
+<p><strong>Proof:</strong> Let us re-write the left hand side, as <span class="math inline">\((\vec{\sigma}\cdot\vec{a})(\vec{\sigma}\cdot\vec{b}) = a_i b_j \sigma_i \sigma_j\)</span> and using the commutation and anticommutation relation and <span id="eq-pauli-mult"><span class="math display">\[
+\sigma_i \sigma_j = \frac{1}{2}[\sigma_i,\sigma_j] + \frac{1}{2}\{\sigma_i,\sigma_j\} = i \epsilon_{ijk} \sigma_k + \delta_{ij} I
+\tag{6}\]</span></span> hence the left hand side becomes <span class="math display">\[
+a_i b_j \sigma_i \sigma_j = a_i b_j (i \epsilon_{ijk} \sigma_k + \delta_{ij} I) = \vec{\sigma} \cdot (\vec{a} \times \vec{b}) + \vec{a} \cdot \vec{b}
+\]</span> Hence proved.</p>
+</div>
+</div>
+<p>For <span class="math inline">\(\vec{a} \in \mathbb{R}^3\)</span> we can show that <span class="math inline">\((\vec{\sigma}\cdot\vec{a})^{2} = |\vec{a}|^2 I\)</span> using <a href="#eq-pauli-mult" class="quarto-xref">Equation&nbsp;6</a>.</p>
+</section>
+</section>
+<section id="rotation-in-two-component-formalism" class="level3" data-number="4.2">
+<h3 data-number="4.2" class="anchored" data-anchor-id="rotation-in-two-component-formalism"><span class="header-section-number">4.2</span> Rotation in Two Component Formalism</h3>
+<p>As we have shown in the earlier sections that the <span class="math inline">\(\{\sigma_i\}\)</span> are the generators of the rotation in the two dimensional hilbert space. So we can write the rotation operator as a <span class="math inline">\(2 \times 2\)</span> matrix as</p>
+<div id="tip-rot-op-2comp" class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;7: Theorem
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><span id="eq-rot-op-2comp-formalism"><span class="math display">\[
+\mathcal{D}(\hat{n},\phi) = e^{-i \frac{\phi}{2} \hat{n} \cdot \vec{\sigma}} = \cos\left(\frac{\phi}{2}\right) I - i \sin\left(\frac{\phi}{2}\right) (\hat{n} \cdot \vec{\sigma})
+\tag{7}\]</span></span></p>
+<p><strong>Proof:</strong> Using the Taylor expansion of exponential operator we can write <span class="math display">\[
+e^{-i \frac{\phi}{2} \hat{n} \cdot \vec{\sigma}} = \sum_{k=0}^{\infty} \frac{1}{k!} \left(-i \frac{\phi}{2} \hat{n} \cdot \vec{\sigma}\right)^k
+\]</span> Now using the property that for <span class="math inline">\(\hat{n} \in \mathbb{R}^3\)</span>, <span class="math inline">\((\hat{n} \cdot \vec{\sigma})^2 = I\)</span> we can split the above summation into odd and even terms as <span class="math display">\[
+\begin{aligned}
+e^{-i \frac{\phi}{2} \hat{n} \cdot \vec{\sigma}} &amp;= \sum_{m=0}^{\infty} \frac{1}{(2m)!} \left(-i \frac{\phi}{2}\right)^{2m} (\hat{n} \cdot \vec{\sigma})^{2m} + \sum_{m=0}^{\infty} \frac{1}{(2m+1)!} \left(-i \frac{\phi}{2}\right)^{2m+1} (\hat{n} \cdot \vec{\sigma})^{2m+1}\\
+&amp;= \sum_{m=0}^{\infty} \frac{1}{(2m)!} \left(-i \frac{\phi}{2}\right)^{2m} I + \sum_{m=0}^{\infty} \frac{1}{(2m+1)!} \left(-i \frac{\phi}{2}\right)^{2m+1} (\hat{n} \cdot \vec{\sigma})
+\end{aligned}
+\]</span> Now using the Taylor expansion of cosine and sine function we get <span class="math display">\[
+e^{-i \frac{\phi}{2} \hat{n} \cdot \vec{\sigma}} = \cos\left(\frac{\phi}{2}\right) I - i \sin\left(\frac{\phi}{2}\right) (\hat{n} \cdot \vec{\sigma})
+\]</span> hence proved.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="eigenvalues-and-eigenvectors-of-angular-momentum" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="eigenvalues-and-eigenvectors-of-angular-momentum"><span class="header-section-number">5</span> Eigenvalues and Eigenvectors of Angular Momentum</h2>
 
 
 </section>
