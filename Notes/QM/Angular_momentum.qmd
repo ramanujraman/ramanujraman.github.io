@@ -90,5 +90,201 @@ Now note that these operator transforms as a vector under rotation.
 
 ::: {#tip-ang-ops-r-vec .callout-note}
 ## Exercise
-Show explicitly that angular momemtum operators along different axis transform as a vector under rotation.
+Show explicitly that the expectation value of angular momemtum operators along different axis transform as a vector under rotation.
 :::
+
+## Spin-$\frac{1}{2}$ Systems and Finite Rotations
+The lowest number,N, of dimensions in which the the angular momentum commutation in @eq-ang-mom-comm are realised is $N=2$. Now the generators
+of the rotation for $N=2$ which satisfy the commutation relation are
+$$
+\sigma_{x} = \begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}
+$${#eq-sigma-x}
+
+$$
+\sigma_{y} = \begin{pmatrix}
+0 & -i \\
+i & 0
+\end{pmatrix}
+$${#eq-sigma-y}
+
+$$
+\sigma_{z} = \begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix}
+$${#eq-sigma-z}
+
+and to make sure the dimensions are satisfied we'll add and extra $\frac{\hbar}{2}$ in front of all of them and they are generator of rotation
+for spin-$\frac{1}{2}$ particles.
+Now like showed in the earlier section that the expectation values transform as vector. Let us consider the transformation of a expectation
+value of spin-$\frac{1}{2}$ matrices around z-axis as,
+$$
+\begin{pmatrix}
+\cos(\phi) & -\sin(\phi) & 0 \\
+\sin(\phi) & \cos(\phi) & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+\langle \hat{S}_x \rangle \\
+\langle \hat{S}_y \rangle \\
+\langle \hat{S}_z \rangle
+\end{pmatrix}
+=
+\begin{pmatrix}
+\langle \hat{S}_x \rangle \cos(\phi) - \langle \hat{S}_y \rangle \sin(\phi) \\
+\langle \hat{S}_x \rangle \sin(\phi) + \langle \hat{S}_y \rangle \cos(\phi) \\
+\langle \hat{S}_z \rangle
+\end{pmatrix}
+$${#eq-rot-transform-spin-matrix}
+Now the above can be extended to any angular momemtum operator $\hat{J}_{i}$ as $\hat{J}'_{j} = R_{ji} \hat{J}_{i}$. But how a general ket
+$|\alpha\rangle$ is transformed under rotation,
+$$
+\begin{aligned}
+e^{-i \hat{J}_z \phi / \hbar} |\alpha\rangle &= e^{-i \hat{J}_z \phi / \hbar}(|0\rangle \langle0|\alpha\rangle + |1\rangle \langle1|\alpha\rangle)\\
+&= (e^{-i \phi/2}|0\rangle \langle0|\alpha\rangle + e^{i \phi/2}|1\rangle \langle1|\alpha\rangle)
+\end{aligned}
+$$
+Now for $\phi=2\pi$, $|\alpha\rangle_{R_{z}(2\pi)} = -|\alpha\rangle$. This is the most astonishing result that after a $2\pi$ rotation one
+pick up a negative sign and in principle it takes two $2\pi$ rotations to return to the original state. But in quantum theory we only measure
+the expectation value of operators and the phase becomes irrevelant so how we detect the sign?
+
+### Pauli Two Component Formalism
+Introduced by Wolfgag Pauli in 1927, the two component formalism is a way to represent spin-$\frac{1}{2}$ particles using two component spinors, which becomes more
+apparent when we consider the full relativistic treatment. As we understood in earlier sections that vectors can be represented using column matrix depending upon the
+dimensions of the hilbert space. So for spin-$\frac{1}{2}$ particle state can be represented as
+$$
+|0\rangle = \begin{pmatrix}
+1 \\
+0
+\end{pmatrix}
+$$
+and
+$$
+|1\rangle = \begin{pmatrix}
+0 \\
+1
+\end{pmatrix}
+$$
+and any vector can be written as
+$$
+|\alpha \rangle = |0\rangle\langle 0|\alpha \rangle + |1\rangle \langle 1|\alpha \rangle = \begin{pmatrix}
+c_0 \\
+c_1
+\end{pmatrix}
+$$
+and
+$$
+\langle \alpha| = \langle \alpha|0\rangle \langle 0| + \langle \alpha|1\rangle \langle 1| = \begin{pmatrix}
+c_0^* & c_1^*
+\end{pmatrix}
+$$
+where $c_0 = \langle 0|\alpha \rangle$ and $c_1 = \langle 1|\alpha \rangle$. Now, we can represent the pauli matrices using two component formalism as
+$$
+\sigma_{x} = |0\rangle \langle 1| + |1\rangle \langle 0| = \begin{pmatrix}
+0 & 1 \\
+1 & 0
+\end{pmatrix}
+$$
+
+$$
+\sigma_{y} = -i|0\rangle \langle 1| + i|1\rangle \langle 0| = \begin{pmatrix}
+0 & -i \\
+i & 0
+\end{pmatrix}
+$$
+
+$$
+\sigma_{z} = |0\rangle \langle 0| - |1\rangle \langle 1| = \begin{pmatrix}
+1 & 0 \\
+0 & -1
+\end{pmatrix}
+$$
+
+#### Some Properties of Pauli Matrices
+
+1. Hermitian: $\sigma_{i}^{\dagger} = \sigma_{i}$
+2. Unitary: $\sigma_{i}^{\dagger} = \sigma_{i}$
+3. Traceless: $Tr(\sigma_{i}) = 0$
+4. Determinant: $det(\sigma_{i}) = -1$
+5. Commutation Relation: $[\sigma_{i},\sigma_{j}] = 2i \epsilon_{ijk} \sigma_{k}$
+6. Anticommutation Relation: $\{\sigma_{i},\sigma_{j}\} = 2 \delta_{ij} I$
+7. Squared: $\sigma_{i}^2 = I$
+
+::: {#tip-pauli-props .callout-note}
+## Exercise
+Prove the above properties of pauli matrices.
+:::
+
+Now consider $\vec{a}\cdot\vec{\sigma}$ where $\vec{a}$ is a vector and $\vec{\sigma} = (\sigma_{x},\sigma_{y},\sigma_{z})$. We can show that
+$$
+\vec{a}\cdot \vec{\sigma} = a_k \sigma_k = \begin{pmatrix}
+a_z & a_x - i a_y \\
+a_x + i a_y & -a_z
+\end{pmatrix}
+$$
+Now we'll show a very important identity which will be much useful later,
+
+::: {#tip-pauli-identity .callout-note}
+## Theorem
+$$
+(\vec{\sigma}\cdot\vec{a})(\vec{\sigma}\cdot\vec{b}) = \vec{a}\cdot\vec{b} I + i \vec{\sigma} \cdot (\vec{a} \times \vec{b})
+$$
+
+**Proof:**
+Let us re-write the left hand side, as $(\vec{\sigma}\cdot\vec{a})(\vec{\sigma}\cdot\vec{b}) = a_i b_j \sigma_i \sigma_j$ and using the commutation and anticommutation
+relation and
+$$
+\sigma_i \sigma_j = \frac{1}{2}[\sigma_i,\sigma_j] + \frac{1}{2}\{\sigma_i,\sigma_j\} = i \epsilon_{ijk} \sigma_k + \delta_{ij} I
+$${#eq-pauli-mult}
+hence the left hand side becomes
+$$
+a_i b_j \sigma_i \sigma_j = a_i b_j (i \epsilon_{ijk} \sigma_k + \delta_{ij} I) = \vec{\sigma} \cdot (\vec{a} \times \vec{b}) + \vec{a} \cdot \vec{b}
+$$
+Hence proved.
+:::
+For $\vec{a} \in \mathbb{R}^3$ we can show that $(\vec{\sigma}\cdot\vec{a})^{2} = |\vec{a}|^2 I$ using @eq-pauli-mult.
+
+### Rotation in Two Component Formalism
+As we have shown in the earlier sections that the $\{\sigma_i\}$ are the generators of the rotation in the two dimensional hilbert space. So we can write the
+rotation operator as a $2 \times 2$ matrix as
+
+::: {#tip-rot-op-2comp .callout-note}
+## Theorem
+$$
+\mathcal{D}(\hat{n},\phi) = e^{-i \frac{\phi}{2} \hat{n} \cdot \vec{\sigma}} = \cos\left(\frac{\phi}{2}\right) I - i \sin\left(\frac{\phi}{2}\right) (\hat{n} \cdot \vec{\sigma})
+$${#eq-rot-op-2comp-formalism}
+
+**Proof:**
+Using the Taylor expansion of exponential operator we can write
+$$
+e^{-i \frac{\phi}{2} \hat{n} \cdot \vec{\sigma}} = \sum_{k=0}^{\infty} \frac{1}{k!} \left(-i \frac{\phi}{2} \hat{n} \cdot \vec{\sigma}\right)^k
+$$
+Now using the property that for $\hat{n} \in \mathbb{R}^3$, $(\hat{n} \cdot \vec{\sigma})^2 = I$ we can split the above summation into odd and even terms as
+$$
+\begin{aligned}
+e^{-i \frac{\phi}{2} \hat{n} \cdot \vec{\sigma}} &= \sum_{m=0}^{\infty} \frac{1}{(2m)!} \left(-i \frac{\phi}{2}\right)^{2m} (\hat{n} \cdot \vec{\sigma})^{2m}
++ \sum_{m=0}^{\infty} \frac{1}{(2m+1)!} \left(-i \frac{\phi}{2}\right)^{2m+1} (\hat{n} \cdot \vec{\sigma})^{2m+1}\\
+&= \sum_{m=0}^{\infty} \frac{1}{(2m)!} \left(-i \frac{\phi}{2}\right)^{2m} I + \sum_{m=0}^{\infty} \frac{1}{(2m+1)!} \left(-i \frac{\phi}{2}\right)^{2m+1}
+(\hat{n} \cdot \vec{\sigma})
+\end{aligned}
+$$
+Now using the Taylor expansion of cosine and sine function we get
+$$
+e^{-i \frac{\phi}{2} \hat{n} \cdot \vec{\sigma}} = \cos\left(\frac{\phi}{2}\right) I - i \sin\left(\frac{\phi}{2}\right) (\hat{n} \cdot \vec{\sigma})
+$$
+hence proved.
+:::
+Now in principle $\chi$ which is a 2-component spinor and transforms under rotation as $\chi \to \mathcal{D}(\phi,\hat{n})\chi$ and as I have asked to show that
+the expectation value of an angular momentum operator transforms as a vector under rotation, and one can go one step ahead and make claims that the angular momentum
+operator indeed transforms as vector under rotation as $\hat{J}'_{i} = R_{ij} \hat{J}_{j}$, but in reality it is $\chi^{\dagger}\sigma_{k}\chi$ that transforms as
+a vector under rotation
+$$
+\chi^{\dagger} \sigma_{i} \chi \to R_{ij} \chi^{\dagger} \sigma_{j} \chi
+$$
+Now as we have seen earlier that under $2\pi$ roatation the spinor picks up a negative sign but what is the eigenvalue of the rotation operator. So we are interested
+in finding $\mathcal{D}(\phi,\hat{n})\chi = \chi$.
+
+## Eigenvalues and Eigenvectors of Angular Momentum

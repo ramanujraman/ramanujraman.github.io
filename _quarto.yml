@@ -1,24 +1,28 @@
 project:
-  type: website
-  output-dir: docs
+     type: website
+     output-dir: docs
 
 website:
-  title: "Ramanuj Raman"
-  navbar:
-    left:
-      - text: Notes
-        href: notes.qmd
-      - text: Some Ideas
-        href: blogs.qmd
+     title: "Ramanuj Raman"
+     navbar:
+          left:
+               - text: Notes
+                 href: notes.qmd
+               - text: Some Ideas
+                 href: blogs.qmd
 
 format:
-  html:
-    theme: cosmo
-    css: styles.css
-    toc: true
-    number-sections: false
-    mathjax: true
+     html:
+          theme:
+               light: flatly
+               dark: darkly
+          respect-user-color-scheme: true
+          include-in-header: includes/toggle-theme.html # optional: remove if you want the default Quarto toggle
+          css: styles.css
+          toc: true
+          number-sections: false
+          mathjax: true
 
-  typst:
-    toc: true
-    number-sections: true
+     typst:
+          toc: true
+          number-sections: true
