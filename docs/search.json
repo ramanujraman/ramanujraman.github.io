@@ -35,48 +35,6 @@
     "text": "5 Eigenvalues and Eigenvectors of Angular Momentum"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Welcome to Ramanuj’s World",
-    "section": "",
-    "text": "Hi there! I’m Ramanuj Raman, a physics enthusiast with a keen interest in every problem of physics I can get my hands on. Currently, I am pursuing my Int-BSMS at the Indian Institute of Science Education and Research (IISER) Mohali. I am in my final year and working on my master’s thesis on Error Budget in Dispersive Readout at PGI-8 (Instiute for Quantum Control), at Forschungszentrum Jülich, Germany, under the supervision of Prof. Dr. Felix Motzoi and Dr. F.A. Cardenas Lopéz.\n Before this I have worked on projects related to light-matter interaction including Jaynes-Cummings, Electromagnetically Induced Transparency, simulation of phases of matter in Bose-Hubbard models, understanding topological phenomena in the SSH model and Kitaev chain.\nMy current interests lie in using techniques from quantum information theory to understand condensed matter systems, and in exploring quantum control methods to improve qubit readout and gate fidelities.\nApart from physics, I enjoy coding, photography, philosophy and writing poems. I have experience working with julia and python for simulations of quantum system and other physical systems in general. I also like to teach and solve problems which has lead me run a semi-active youtube channel R2E and I also like to talk to fellow physicist on problems and there prespectives on things.\nFeel free to explore my notes and blogs to learn more about my work and thoughts. If you want more about my professional experience please look at my CV here"
-  },
-  {
-    "objectID": "index.html#update-log",
-    "href": "index.html#update-log",
-    "title": "Welcome to Ramanuj’s World",
-    "section": "Update Log",
-    "text": "Update Log\n\n19 January 2026: Started on my notes for theory of angular momentum and purcell filter. Hope I’ll finish it … as soon as I can.\n12 January 2026: Redesigned the website layout for…idk fun I guess. Just kidding, I wanted a cleaner look and better way to organize and present my notes and blogs."
-  },
-  {
-    "objectID": "index.html#contact",
-    "href": "index.html#contact",
-    "title": "Welcome to Ramanuj’s World",
-    "section": "Contact",
-    "text": "Contact\n\n📧 Email: ramanujraman@icloud.com\n💼 LinkedIn: linkedin.com/in/ramanuj-raman"
-  },
-  {
-    "objectID": "notes.html",
-    "href": "notes.html",
-    "title": "Physics Notes",
-    "section": "",
-    "text": "Mathematical Foundation of Quantum Mechanics\nTheory of Angular Momentum"
-  },
-  {
-    "objectID": "notes.html#quantum-mechanics",
-    "href": "notes.html#quantum-mechanics",
-    "title": "Physics Notes",
-    "section": "",
-    "text": "Mathematical Foundation of Quantum Mechanics\nTheory of Angular Momentum"
-  },
-  {
-    "objectID": "notes.html#circuit-quantum-electrodynamics-cqed",
-    "href": "notes.html#circuit-quantum-electrodynamics-cqed",
-    "title": "Physics Notes",
-    "section": "Circuit Quantum Electrodynamics (cQED)",
-    "text": "Circuit Quantum Electrodynamics (cQED)\n\nLight-Matter Interaction in cQED\nDispersive Readout in cQED\nPurcell Filter"
-  },
-  {
     "objectID": "Notes/cQED/purcell_filter.html",
     "href": "Notes/cQED/purcell_filter.html",
     "title": "Purcell Filter",
@@ -103,5 +61,54 @@
     "title": "Purcell Filter",
     "section": "3 Semiclassical Analysis of Purcell Filter",
     "text": "3 Semiclassical Analysis of Purcell Filter\nNow by looking at the resonator field evolution (\\(\\hat{a}\\)) and filter field evolution (\\(\\hat{b}\\)) in the rotating frame at the drive frequency,\\(e^{i \\omega_d t}\\) then the langevin equation in the semi-classical limit is given by \\[\n\\dot{\\alpha} = -i \\Delta_{rd} \\alpha - i G \\beta - i g \\epsilon_r\n\\] \\[\n\\dot{\\beta} = -i \\Delta_{fd} \\beta - i G^{*} \\alpha - \\frac{\\kappa_f}{2} \\beta\n\\]"
+  },
+  {
+    "objectID": "notes.html",
+    "href": "notes.html",
+    "title": "Physics Notes",
+    "section": "",
+    "text": "Mathematical Foundation of Quantum Mechanics\nTheory of Angular Momentum"
+  },
+  {
+    "objectID": "notes.html#quantum-mechanics",
+    "href": "notes.html#quantum-mechanics",
+    "title": "Physics Notes",
+    "section": "",
+    "text": "Mathematical Foundation of Quantum Mechanics\nTheory of Angular Momentum"
+  },
+  {
+    "objectID": "notes.html#circuit-quantum-electrodynamics-cqed",
+    "href": "notes.html#circuit-quantum-electrodynamics-cqed",
+    "title": "Physics Notes",
+    "section": "Circuit Quantum Electrodynamics (cQED)",
+    "text": "Circuit Quantum Electrodynamics (cQED)\n\nLight-Matter Interaction in cQED\nDispersive Readout in cQED\nPurcell Filter"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "",
+    "text": "Hi there! I’m Ramanuj Raman, a physics enthusiast with a keen interest in every problem of physics I can get my hands on. Currently, I am pursuing my Int-BSMS at the Indian Institute of Science Education and Research (IISER) Mohali. I am in my final year and working on my master’s thesis on Error Budget in Dispersive Readout at PGI-8 (Instiute for Quantum Control), at Forschungszentrum Jülich, Germany, under the supervision of Prof. Dr. Felix Motzoi and Dr. F.A. Cardenas Lopéz.\n Before this I have worked on projects related to light-matter interaction including Jaynes-Cummings, Electromagnetically Induced Transparency, simulation of phases of matter in Bose-Hubbard models, understanding topological phenomena in the SSH model and Kitaev chain.\nMy current interests lie in using techniques from quantum information theory to understand condensed matter systems, and in exploring quantum control methods to improve qubit readout and gate fidelities.\nApart from physics, I enjoy coding, photography, philosophy and writing poems. I have experience working with julia and python for simulations of quantum system and other physical systems in general. I also like to teach and solve problems which has lead me run a semi-active youtube channel R2E and I also like to talk to fellow physicist on problems and there prespectives on things.\nFeel free to explore my notes and blogs to learn more about my work and thoughts. If you want more about my professional experience please look at my CV here"
+  },
+  {
+    "objectID": "index.html#update-log",
+    "href": "index.html#update-log",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "Update Log",
+    "text": "Update Log\n\n27 April 2026: Defended my master’s thesis and will also graduate in June. If you are interested in what I spent my whole year on you can check out my thesis (unsigned version) here.\n19 January 2026: Started on my notes for theory of angular momentum and purcell filter. Hope I’ll finish it … as soon as I can.\n12 January 2026: Redesigned the website layout for…idk fun I guess. Just kidding, I wanted a cleaner look and better way to organize and present my notes and blogs."
+  },
+  {
+    "objectID": "index.html#contact",
+    "href": "index.html#contact",
+    "title": "Welcome to Ramanuj’s World",
+    "section": "Contact",
+    "text": "Contact\n\n📧 Email: ramanujraman@icloud.com\n💼 LinkedIn: linkedin.com/in/ramanuj-raman"
+  },
+  {
+    "objectID": "Notes/Quant-ops/Angular_momentum.html#photon-counting",
+    "href": "Notes/Quant-ops/Angular_momentum.html#photon-counting",
+    "title": "Quantum Theory of Optical Coherence",
+    "section": "2 Photon Counting",
+    "text": "2 Photon Counting"
   }
 ]

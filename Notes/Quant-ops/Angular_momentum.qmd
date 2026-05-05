@@ -1,0 +1,15 @@
+---
+title: Quantum Theory of Optical Coherence
+author: Ramanuj Raman
+date: last-modified
+format:
+  html:
+    number-sections: true
+    toc: true
+    toc-depth: 3
+  typst:
+    number-sections: true
+---
+## Introduction
+
+## Photon Counting 
