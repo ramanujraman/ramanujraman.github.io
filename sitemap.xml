@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://ramanujraman.github.io/blogs.html</loc>
-    <lastmod>2026-01-13T08:04:58.153Z</lastmod>
+    <loc>https://ramanujraman.github.io/photos.html</loc>
+    <lastmod>2026-05-21T13:09:09.106Z</lastmod>
   </url>
   <url>
-    <loc>https://ramanujraman.github.io/Notes/QM/Angular_momentum.html</loc>
-    <lastmod>2026-05-21T10:20:01.899Z</lastmod>
+    <loc>https://ramanujraman.github.io/Notes/QM/math_fonds_qm.html</loc>
+    <lastmod>2026-05-21T10:19:20.768Z</lastmod>
   </url>
   <url>
     <loc>https://ramanujraman.github.io/Notes/cQED/purcell_filter.html</loc>
@@ -21,11 +21,11 @@
     <lastmod>2026-05-21T10:35:23.317Z</lastmod>
   </url>
   <url>
-    <loc>https://ramanujraman.github.io/Notes/Quant-ops/Angular_momentum.html</loc>
-    <lastmod>2026-05-02T12:00:32.807Z</lastmod>
+    <loc>https://ramanujraman.github.io/Notes/QM/Angular_momentum.html</loc>
+    <lastmod>2026-05-21T10:20:01.899Z</lastmod>
   </url>
   <url>
-    <loc>https://ramanujraman.github.io/Notes/QM/math_fonds_qm.html</loc>
-    <lastmod>2026-05-21T10:19:20.768Z</lastmod>
+    <loc>https://ramanujraman.github.io/blogs.html</loc>
+    <lastmod>2026-01-13T08:04:58.153Z</lastmod>
   </url>
 </urlset>
