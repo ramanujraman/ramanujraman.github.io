@@ -1,0 +1,59 @@
+---
+title: "Photo Gallery"
+lightbox: true
+---
+
+Welcome to my photo gallery! Click on any image to expand it.
+
+```{python}
+#| output: asis
+#| echo: false
+import os
+from PIL import Image
+
+image_folder = "images"
+
+# Find all image files in the directory
+images = [f for f in os.listdir(image_folder) if f.lower().endswith(('.jpg', '.jpeg', '.png'))]
+images.sort()
+
+horizontal_images = []
+vertical_images = []
+
+# Check dimensions and separate into lists
+for img in images:
+    file_path = os.path.join(image_folder, img)
+    try:
+        # Open the image to check its size
+        with Image.open(file_path) as i:
+            width, height = i.size
+            if width >= height:
+                horizontal_images.append(img)
+            else:
+                vertical_images.append(img)
+    except Exception as e:
+        # Skip if the file can't be read as an image
+        pass
+
+# --- Print Horizontal Images ---
+if horizontal_images:
+#    print("### Landscape\n")
+    # 2 columns for horizontal keeps them wide enough to see
+    print("::: {layout-ncol=2}\n")
+    for img in horizontal_images:
+        caption = img.rsplit('.', 1)[0].replace('-', ' ').replace('_', ' ').title()
+        file_path = f"{image_folder}/{img}"
+        print(f"![{caption}]({file_path}){{group=\"auto-gallery\"}}\n")
+    print(":::\n")
+
+# --- Print Vertical Images ---
+if vertical_images:
+#    print("### Portrait\n")
+    # 2 columns for vertical makes them smaller so they fit the page better
+    print("::: {layout-ncol=2}\n")
+    for img in vertical_images:
+        caption = img.rsplit('.', 1)[0].replace('-', ' ').replace('_', ' ').title()
+        file_path = f"{image_folder}/{img}"
+        print(f"![{caption}]({file_path}){{group=\"auto-gallery\"}}\n")
+    print(":::\n")
+```

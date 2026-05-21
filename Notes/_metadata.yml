@@ -1,18 +1,3 @@
-project:
-     type: website
-     output-dir: docs
-
-website:
-     title: "Ramanuj Raman"
-     navbar:
-          left:
-               - text: Notes
-                 href: notes.qmd
-               - text: Some Ideas
-                 href: blogs.qmd
-               - text: Photos
-                 href: photos.qmd
-
 format:
      html:
           # --- 1. Core Theming ---
@@ -58,3 +43,45 @@ format:
                   }
                 };
                 </script>
+
+     pdf:
+          # Core engine
+          pdf-engine: lualatex
+          include-in-header:
+               - text: |
+                   \usepackage{physics}
+          documentclass: article
+          papersize: a4
+          classoption: [12pt, twoside]
+
+          # --- 1. Typography & Spacing ---
+          mainfont: "Latin Modern Roman"
+          sansfont: "Latin Modern Sans"
+          monofont: "Latin Modern Mono"
+          microtype: true
+          linestretch: 1.2
+
+          # --- 2. Margins & Layout ---
+          geometry:
+               - top=30mm
+               - bottom=30mm
+               - left=25mm
+               - right=25mm
+               - heightrounded
+
+          # --- 3. Links & Colors ---
+          colorlinks: true               
+          linkcolor: blue                # Use standard name instead of hex
+          urlcolor: blue                 # Use standard name instead of hex
+          citecolor: green               # Use standard name instead of hex
+
+          # --- 4. Structure & TOC ---
+          toc: true
+          toc-title: "Table of Contents"
+          toc-depth: 2
+          number-sections: true
+          number-depth: 2
+
+          # --- 5. Code blocks & Figures ---
+          highlight-style: arrow
+          fig-pos: "H"
