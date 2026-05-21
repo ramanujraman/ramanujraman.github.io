@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ramanuj Raman">
-<meta name="dcterms.date" content="2026-01-13">
+<meta name="dcterms.date" content="2026-05-21">
 
 <title>Purcell Filter – Ramanuj Raman</title>
 <style>
@@ -43,6 +43,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="../../site_libs/bootstrap/bootstrap-d1b12f2568ecbe55642fee6aa00bd082.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="../../site_libs/bootstrap/bootstrap-dark-b2511bcbb01c2159fd96a78deb42ffd9.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="../../site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,6 +73,16 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script>
+window.MathJax = {
+  loader: {load: ['[tex]/physics']},
+  tex: {
+    packages: {'[+]': ['physics']},
+    tags: 'ams'
+  }
+};
+</script>
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -142,7 +155,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -150,10 +163,10 @@ window.Quarto = {
   <li><a href="#circuit-diagram-and-hamiltonian" id="toc-circuit-diagram-and-hamiltonian" class="nav-link" data-scroll-target="#circuit-diagram-and-hamiltonian"><span class="header-section-number">2</span> Circuit Diagram and Hamiltonian</a></li>
   <li><a href="#semiclassical-analysis-of-purcell-filter" id="toc-semiclassical-analysis-of-purcell-filter" class="nav-link" data-scroll-target="#semiclassical-analysis-of-purcell-filter"><span class="header-section-number">3</span> Semiclassical Analysis of Purcell Filter</a></li>
   </ul>
-<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="purcell_filter.pdf"><i class="bi bi-file-pdf"></i>Typst</a></li></ul></div></nav>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="purcell_filter.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
+<main class="content page-columns page-full" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -174,7 +187,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 13, 2026</p>
+      <p class="date">May 21, 2026</p>
     </div>
   </div>
   
@@ -188,8 +201,8 @@ window.Quarto = {
 
 <section id="motivation" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="motivation"><span class="header-section-number">1</span> Motivation</h2>
-<p>In circuit QED, the qubit is coupled to a readout resonator which is in turn coupled to a transmission line. This coupling allows for interaction of the qubit with field around and sends away it’s information to the measurement apparatus, FPGAs in our case. However, this coupling is dispersive in nature and lead to unwanted decay of qubit state via the resonator, known as Purcell decay. To mitigate this we use a Purcell filter, obviously. The system hamiltonian is given by <span id="eq-disp-ham"><span class="math display">\[
-H = (\omega_r + \chi \sigma_z) a^\dagger a + \frac{\omega_q}{2}\sigma_z
+<p>In circuit QED, the qubit is coupled to a readout resonator which is in turn coupled to a transmission line. This coupling allows for interaction of the qubit with field around and sends away it’s information to the measurement apparatus, consiting of amplifers and heterodyne detectors. However, this coupling is dispersive in nature and lead to unwanted decay of qubit state via the resonator, known as Purcell decay. To mitigate this we use a Purcell filter, obviously. The system hamiltonian is given by <span id="eq-disp-ham"><span class="math display">\[
+H = (\omega_r + \chi \sigma_z) a^\dagger a - \frac{\omega_q}{2}\sigma_z
 \tag{1}\]</span></span> where <span class="math inline">\(\chi = \frac{g^2}{\Delta}\)</span> is the dispersive shift which is the amount by which the resonator frequency shifts depending on the qubit state. We exploit this shift to tell the qubit state. But the problem is the readout resonator decays into the transmission line with a rate <span class="math inline">\(\kappa_r\)</span>, this is essentially in some sense the rate at which information about the qubit state is gained. This decay also opens up a decay channel for the qubit via the resonator given as <span class="math inline">\(a \to a-\frac{g}{\Delta} \sigma_{-}\)</span>. This leads to an effective decay rate of the qubit given by <span class="math inline">\(\kappa (\frac{g}{\Delta})^2\)</span>.<br>
 Now the possible way out of this decay problem is:</p>
 <ul>
@@ -199,18 +212,18 @@ Now the possible way out of this decay problem is:</p>
 </ul>
 <p>Now another way forward is to somehow have different rates for resonator and qubit. This is where the Purcell filter comes in.</p>
 </section>
-<section id="circuit-diagram-and-hamiltonian" class="level2" data-number="2">
+<section id="circuit-diagram-and-hamiltonian" class="level2 page-columns page-full" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="circuit-diagram-and-hamiltonian"><span class="header-section-number">2</span> Circuit Diagram and Hamiltonian</h2>
-<div id="fig-elephants" class="quarto-layout-panel">
-<figure class="quarto-float quarto-float-fig figure">
+<div id="fig-elephants" class="quarto-layout-panel page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
 <div aria-describedby="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: flex-start;">
-<img src="Notes-figs/Purcell_Filter_circuit.png" class="img-fluid figure-img">
+<a href="Notes-figs/Purcell_Filter_circuit.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Figure&nbsp;1: Circuit Diagram of a qubit coupled to a readout resonator which is in turn coupled to a Purcell filter and then to the transmission line"><img src="Notes-figs/Purcell_Filter_circuit.png" class="img-fluid figure-img"></a>
 </div>
 </div>
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-elephants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Circuit Diagram of a qubit coupled to a readout resonator which is in turn coupled to a Purcell filter and then to the transmission line
 </figcaption>
 </figure>
@@ -793,8 +806,41 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 
 
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

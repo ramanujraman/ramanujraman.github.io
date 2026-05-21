@@ -70,6 +70,16 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<style>html{ scroll-behavior: smooth; }</style>
+<script>
+window.MathJax = {
+  loader: {load: ['[tex]/physics']},
+  tex: {
+    packages: {'[+]': ['physics']},
+    tags: 'ams'
+  }
+};
+</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -113,7 +123,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="99">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
@@ -732,4 +742,5 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
+<script src="../../site_libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -1,12 +1,393 @@
-p {
-    text-align: justify;
-}
-.float-left {
-    float: left;
-    margin: 0 1.2em 0.8em 0;
+/* =========================================
+   0. Global Font Overrides (Modern Lab Vibe)
+   ========================================= */
+
+/* Import Space Grotesk (Headers), Source Serif 4 (Body), and Fira Code */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Fira+Code:wght@400&display=swap');
+
+:root {
+    /* Elegant, highly readable serif for the main physics text */
+    --bs-font-serif: 'Source Serif 4', Georgia, serif;
+    --bs-body-font-family: var(--bs-font-serif);
+    
+    /* Technical, geometric sans-serif for the headers (gives that NASA/CERN feel) */
+    --bs-heading-font-family: 'Space Grotesk', sans-serif;
+    
+    /* Monospace for code */
+    --bs-font-monospace: 'Fira Code', monospace;
 }
 
-.float-right {
-    float: right;
-    margin: 0 0 0.8em 1.2em;
+/* Make the geometric headers stand out slightly */
+h1, h2, h3, h4, h5 {
+    letter-spacing: -0.5px;
+    font-weight: 500;
 }
+
+p {
+    line-height: 1.65;
+}
+
+
+/* =========================================
+   1. Typography & Readability
+   ========================================= */
+
+/* Add a subtle underline to H2 headers to clearly separate major sections */
+h2 {
+    border-bottom: 1px solid var(--bs-border-color);
+    padding-bottom: 0.3em;
+    margin-top: 1.5em;
+}
+
+/* Make inline math and code stand out slightly from standard justified text */
+:not(pre) > code {
+    padding: 0.15em 0.4em;
+    background-color: var(--bs-tertiary-bg);
+    border-radius: 0.25rem;
+    color: var(--bs-pink, #d63384);
+    font-size: 0.9em;
+}
+
+/* =========================================
+   2. Beautiful Blockquotes (Great for theorems or definitions)
+   ========================================= */
+blockquote {
+    border-left: 4px solid var(--bs-primary);
+    background-color: var(--bs-light);
+    padding: 1em 1.5em;
+    margin: 1.5em 0;
+    font-style: italic;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Ensure the blockquote background looks good in 'darkly' mode */
+[data-bs-theme="dark"] blockquote {
+    background-color: #2b2b2b; 
+}
+
+/* =========================================
+   3. Image Utilities
+   ========================================= */
+
+/* Add a soft drop-shadow and rounded corners to your graphs/images */
+.shadow-img {
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+[data-bs-theme="dark"] .shadow-img {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Center an image and give it breathing room */
+.center-img {
+    display: block;
+    margin: 2em auto;
+}
+
+/* Style figure captions to look academic (smaller, italic, centered) */
+figcaption {
+    font-size: 0.85em;
+    color: var(--bs-secondary);
+    text-align: center;
+    font-style: italic;
+    margin-top: 0.8em;
+}
+/* =========================================
+   5. Advanced Image Placement (Responsive)
+   ========================================= */
+
+/* Pull image to the right with clean text wrapping */
+.img-right {
+    float: right;
+    margin: 0.5em 0 1.5em 2em;
+    max-width: 45%; /* Prevents the image from eating all the text space */
+}
+
+/* Pull image to the left with clean text wrapping */
+.img-left {
+    float: left;
+    margin: 0.5em 2em 1.5em 0;
+    max-width: 45%;
+}
+
+/* Clearfix: Use this to force the next section to start below the floating image */
+.clear-floats {
+    clear: both;
+    display: table;
+    width: 100%;
+}
+
+/* Mobile Fix: Disable floating on small screens so text isn't crushed */
+@media (max-width: 768px) {
+    .img-left, .img-right {
+        float: none;
+        margin: 1.5em auto;
+        max-width: 90%;
+        display: block;
+    }
+}
+
+/* =========================================
+   6. Side-by-Side Images (Flexbox)
+   ========================================= */
+/* Use this container when you want two images perfectly side-by-side */
+.side-by-side {
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+    align-items: center;
+    margin: 2em 0;
+}
+
+.side-by-side > * {
+    flex: 1; /* Makes both items take up equal space */
+}
+
+@media (max-width: 768px) {
+    .side-by-side {
+        flex-direction: column; /* Stacks them on mobile */
+    }
+}
+/* =========================================
+   4. Custom Highlight Box
+   ========================================= */
+/* Use this for important formulas or key takeaways */
+.key-takeaway {
+    background-color: rgba(44, 153, 100, 0.1); /* Subtle green */
+    border: 1px solid rgba(44, 153, 100, 0.4);
+    border-radius: 6px;
+    padding: 1.5em;
+    margin: 1.5em 0;
+}
+
+/* =========================================
+   7. Academic Tables (Booktabs Style)
+   ========================================= */
+table {
+    border-collapse: collapse;
+    margin: 2em auto;       /* Centers the table */
+    font-size: 0.95em;
+}
+
+thead th {
+    border-top: 2px solid var(--bs-body-color);
+    border-bottom: 1px solid var(--bs-body-color);
+    padding: 0.7em 1.5em;
+    text-align: left;
+}
+
+tbody tr:last-child {
+    border-bottom: 2px solid var(--bs-body-color);
+}
+
+td {
+    padding: 0.6em 1.5em;
+}
+
+/* =========================================
+   8. Theorem and Definition Boxes
+   ========================================= */
+.theorem {
+    border-left: 4px solid #0dcaf0; /* Cyan edge */
+    background-color: var(--bs-tertiary-bg);
+    padding: 1.2em 1.5em 0.2em 1.5em;
+    margin: 1.5em 0;
+    border-radius: 0 6px 6px 0;
+}
+
+/* Styles the bold "Theorem X:" title */
+.theorem-title {
+    font-weight: 700;
+    color: var(--bs-info-text-emphasis);
+    margin-bottom: 0.5em;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.85em;
+}
+
+/* =========================================
+   9. Smart Highlighter
+   ========================================= */
+.hl {
+    background-color: rgba(255, 215, 0, 0.4); /* Soft gold */
+    padding: 0.1em 0.3em;
+    border-radius: 4px;
+}
+
+[data-bs-theme="dark"] .hl {
+    background-color: rgba(255, 215, 0, 0.2); /* Darker gold for dark mode */
+    color: #ffd700;
+}
+
+/* =========================================
+   10. Print Media Query (For printing directly from the browser)
+   ========================================= */
+@media print {
+    /* Hide the navigation bar, sidebars, and theme toggler */
+    #quarto-header, .quarto-title-meta-heading, #quarto-sidebar, .toc-actions {
+        display: none !important;
+    }
+    
+    /* Force background to white and text to black to save ink */
+    body {
+        background: white !important;
+        color: black !important;
+    }
+
+    /* Prevent page breaks inside images and blockquotes */
+    img, blockquote, .theorem, .key-takeaway {
+        page-break-inside: avoid;
+    }
+}
+/* =========================================
+   11. Callout Color Overrides
+   ========================================= */
+:root {
+    /* Change 'Note' from default blue to a rich purple */
+    --quarto-callout-note-color: #6f42c1; 
+    
+    /* Change 'Tip' from default green to a modern teal */
+    --quarto-callout-tip-color: #20c997;
+}
+
+/* Dark mode adjustments so the colors pop against the dark background */
+[data-bs-theme="dark"] {
+    --quarto-callout-note-color: #b197fc;
+    --quarto-callout-tip-color: #63e6be;
+}
+/* =========================================
+   12. Callout Structural Styling
+   ========================================= */
+/* Apply to all callouts */
+div.callout {
+    border-radius: 8px; /* Softer, rounded corners */
+    border: none;       /* Remove the default full border */
+    border-left: 5px solid; /* Keep only a thick colored accent bar on the left */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Soft drop shadow */
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+/* Make the shadow slightly darker in dark mode */
+[data-bs-theme="dark"] div.callout {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    background-color: #2b2b2b; /* Ensure the background matches your darkly theme */
+}
+
+/* Clean up the header layout */
+div.callout-header {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05); /* Subtle divider below the title */
+    padding-bottom: 0.5em;
+}
+
+[data-bs-theme="dark"] div.callout-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* =========================================
+   17. Link & Accent Colors
+   ========================================= */
+
+/* --- 1. Standard Hyperlinks --- */
+/* Deep professional blue for light mode */
+#quarto-content a:not(.toc-action):not([role="doc-biblioref"]) {
+    color: #0969da; 
+    font-weight: 500;
+}
+
+/* Bright, glowing blue for dark mode */
+[data-bs-theme="dark"] #quarto-content a:not(.toc-action):not([role="doc-biblioref"]) {
+    color: #58a6ff; 
+}
+
+/* Hover effects for standard links */
+#quarto-content a:not(.toc-action):hover {
+    color: #004494; /* Darker blue on hover */
+}
+[data-bs-theme="dark"] #quarto-content a:not(.toc-action):hover {
+    color: #79c0ff; /* Lighter blue on hover */
+}
+
+/* --- 2. Academic Citations (e.g., [@einstein1905]) --- */
+/* Classic academic green for light mode */
+#quarto-content a[role="doc-biblioref"] {
+    color: #22863a; 
+}
+
+/* Vibrant mint green for dark mode */
+[data-bs-theme="dark"] #quarto-content a[role="doc-biblioref"] {
+    color: #3fb950; 
+}
+
+/* --- 3. Table of Contents (TOC) Highlighting --- */
+/* Style the currently active TOC item so readers know exactly where they are */
+#TOC a.active, 
+.sidebar nav a.active {
+    color: var(--bs-primary) !important;
+    font-weight: 700;
+    border-left: 2px solid var(--bs-primary);
+    padding-left: 10px; /* Indents the active item slightly to make it stand out */
+    transition: all 0.2s ease-in-out;
+}
+
+/* Keep inactive TOC links a subtle gray so they don't distract from the main text */
+#TOC a:not(.active) {
+    color: var(--bs-secondary);
+}
+
+
+/* =========================================
+   18. The "Hacker / Developer" Aesthetic Upgrades
+========================================= */
+
+/* --- 1. Enable Font Ligatures --- */
+body {
+    font-variant-ligatures: contextual;
+    -webkit-font-feature-settings: "calt" 1, "liga" 1;
+    font-feature-settings: "calt" 1, "liga" 1;
+}
+
+/* --- 2. Terminal Window Code Blocks --- */
+div.sourceCode pre {
+    border-radius: 8px;
+    padding-top: 35px; /* Creates space at the top for our buttons */
+    position: relative;
+    background-color: #1e1e1e; /* Deep terminal black */
+    border: 1px solid #333;
+}
+
+/* Draws the Red, Yellow, and Green macOS dots */
+div.sourceCode pre::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ff5f56; /* Close button (Red) */
+    box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f; /* Minimize (Yellow) & Maximize (Green) */
+}
+
+/* --- 3. Matrix-Style Text Selection --- */
+::selection {
+    background-color: #00ff41; /* Neon Terminal Green */
+    color: #000000; /* Black text for high contrast */
+}
+
+::-moz-selection {
+    background-color: #00ff41;
+    color: #000000;
+}
+
+/* --- 4. Glowing Neon Links (Dark Mode Only) --- */
+[data-bs-theme="dark"] #quarto-content a:not(.toc-action):not([role="doc-biblioref"]) {
+    color: #00ff41; /* Matrix green links */
+    text-shadow: 0 0 5px rgba(0, 255, 65, 0.4); /* Subtle neon glow */
+}
+
+[data-bs-theme="dark"] #quarto-content a:not(.toc-action):hover {
+    color: #ffffff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Glows bright white on hover */
+} 

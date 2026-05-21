@@ -13,16 +13,84 @@ website:
 
 format:
      html:
+          # --- 1. Core Theming ---
           theme:
                light: flatly
                dark: darkly
           respect-user-color-scheme: true
-          include-in-header: includes/toggle-theme.html # optional: remove if you want the default Quarto toggle
           css: styles.css
-          toc: true
-          number-sections: false
-          mathjax: true
+          # Notice: toggle-theme.html has been removed from here!
 
-     typst:
+          # --- 2. Navigation & Table of Contents ---
           toc: true
+          toc-title: "On this page"
+          toc-location: right
+          toc-depth: 3
+          toc-expand: true
+          smooth-scroll: true
+          anchor-sections: true
+
+          # --- 3. Reading Experience & Layout ---
+          number-sections: false
+          page-layout: article
+          lightbox: true
+          fig-cap-location: margin
+
+          # --- 4. Code Blocks & Math ---
+          # code-copy: hover
+          # code-fold: show
+          # code-tools: true
+          html-math-method: mathjax
+          include-in-header: 
+            - text: |
+                <script>
+                window.MathJax = {
+                  loader: {load: ['[tex]/physics']},
+                  tex: {
+                    packages: {'[+]': ['physics']},
+                    tags: 'ams'
+                  }
+                };
+                </script>
+
+     pdf:
+          # Core engine
+          pdf-engine: lualatex
+          include-in-header:
+               - text: |
+                   \usepackage{physics}
+          documentclass: article
+          papersize: a4
+          classoption: [12pt, twoside]
+
+          # --- 1. Typography & Spacing ---
+          mainfont: "Latin Modern Roman"
+          sansfont: "Latin Modern Sans"
+          monofont: "Latin Modern Mono"
+          microtype: true
+          linestretch: 1.2
+
+          # --- 2. Margins & Layout ---
+          geometry:
+               - top=30mm
+               - bottom=30mm
+               - left=25mm
+               - right=25mm
+               - heightrounded
+
+          # --- 3. Links & Colors ---
+          colorlinks: true               
+          linkcolor: blue                # Use standard name instead of hex
+          urlcolor: blue                 # Use standard name instead of hex
+          citecolor: green               # Use standard name instead of hex
+
+          # --- 4. Structure & TOC ---
+          toc: true
+          toc-title: "Table of Contents"
+          toc-depth: 2
           number-sections: true
+          number-depth: 2
+
+          # --- 5. Code blocks & Figures ---
+          highlight-style: arrow
+          fig-pos: "H"
