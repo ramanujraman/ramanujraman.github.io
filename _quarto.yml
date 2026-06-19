@@ -4,6 +4,8 @@ project:
 
 website:
      title: "Ramanuj Raman"
+     description: "Academic portfolio, research notes, and photography by Ramanuj Raman."
+     site-url: "https://ramanujraman.github.io"
      navbar:
           left:
                - text: Notes
@@ -21,7 +23,6 @@ format:
                dark: darkly
           respect-user-color-scheme: true
           css: styles.css
-          # Notice: toggle-theme.html has been removed from here!
 
           # --- 2. Navigation & Table of Contents ---
           toc: true
@@ -37,17 +38,16 @@ format:
           page-layout: article
           # --- Layout Grid Control ---
           grid:
-               body-width: 1400px   # The default is 800px. This makes the text area much wider!
-               margin-width: 150px  # Controls how wide the right-side TOC area is
+               body-width: 1400px   
+               margin-width: 150px  
           lightbox: true
           fig-cap-location: bottom
 
           # --- 4. Code Blocks & Math ---
-          # code-copy: hover
-          # code-fold: show
-          # code-tools: true
           html-math-method: mathjax
           include-in-header: 
+            - text: |
+                <meta name="google-site-verification" content="Asp6ju1mO1Wt5GAC8tnYU3vLUc34ouwCYJaeog2Th-E" />
             - text: |
                 <script>
                 window.MathJax = {
