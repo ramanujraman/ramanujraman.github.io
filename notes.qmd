@@ -1,6 +1,9 @@
 ---
 title: Physics Notes
 ---
+Here are some of the notes I have taken while learning physics during my Bachelor's and Master's degree at IISER Mohali. I have tried to make them as detailed as possible and tried to give mathematical derivations whereever possible. These notes might be pretty similar to some textbooks, but I have tried to make them as simple as possible. Note that these notes are not complete and I in the process of digitizing my handwritten notes, so I will keep adding more notes as I go along. If you find any mistakes in the notes, please feel free to contact me and I will correct them. You can also contribute to these notes by sending me a pull request on GitHub. 
+
+I have a long term goal of also including advanced topics which are part of modern research in physics and interdisciplinary topics. So if you are interested in contributing please feel free to contact me. The point of these notes is to make them as simple as possible and to make them accessible to everyone.
 
 ## Quantum Mechanics
 - [Mathematical Foundation of Quantum Mechanics](Notes/QM/math_fonds_qm.qmd)

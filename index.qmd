@@ -20,6 +20,7 @@ and there prespectives on things.\
 professional experience please look at my CV [here](assets/Ramanuj_CV.pdf)*\
 
 ## Update Log
+- **16 June 2026:** Graduated with BS-MS degree in Physics from IISER Mohali. I will be joining my PhD in Physics at Forschungszentrum Jülich, Germany in September 2026. I will be working on quantum control and quantum information processing with superconducting qubits under the supervision of Prof. Dr. Felix Motzoi and Dr. F.A. Cardenas Lopéz.
 - **27 April 2026:** Defended my master's thesis and will also graduate in June. If you are interested in what I spent my whole year on you can check out my thesis (unsigned version) [here](assets/Ramanuj_Thesis.pdf).
 - **19 January 2026:** Started on my notes for theory of angular momentum and purcell filter. Hope I'll finish it ... as soon as I can.
 - **12 January 2026:** Redesigned the website layout for...idk fun I guess. Just kidding, I wanted a cleaner look and better way to organize
