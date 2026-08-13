@@ -348,6 +348,7 @@ window.Quarto = {
   <li><a href="#rotation-in-two-component-formalism" id="toc-rotation-in-two-component-formalism" class="nav-link" data-scroll-target="#rotation-in-two-component-formalism"><span class="header-section-number">4.2</span> Rotation in Two Component Formalism</a></li>
   </ul></li>
   <li><a href="#eigenvalues-and-eigenvectors-of-angular-momentum" id="toc-eigenvalues-and-eigenvectors-of-angular-momentum" class="nav-link" data-scroll-target="#eigenvalues-and-eigenvectors-of-angular-momentum"><span class="header-section-number">5</span> Eigenvalues and Eigenvectors of Angular Momentum</a></li>
+  <li><a href="#matrix-representation-of-angular-momentum-operators" id="toc-matrix-representation-of-angular-momentum-operators" class="nav-link" data-scroll-target="#matrix-representation-of-angular-momentum-operators"><span class="header-section-number">6</span> Matrix Representation of Angular Momentum Operators</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Angular_momentum.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -679,19 +680,49 @@ i \hbar \epsilon_{ijk} \hat{J}_i \hat{J}_k + i \hbar \epsilon_{ijk}\hat{J}_k \ha
 <p>The above claim is very important as it shows that we can find a common eigenbasis for <span class="math inline">\(\hat{J}^{2}\)</span> and <span class="math inline">\(\hat{J}_i\)</span>. Now we can choose the <span class="math inline">\(z\)</span>-axis as the quantization axis and we can find a common eigenbasis for <span class="math inline">\(\hat{J}^{2}\)</span> and <span class="math inline">\(\hat{J}_z\)</span> as <span class="math inline">\(\ket{j,m}\)</span> where <span class="math inline">\(\hat{J}^{2}\ket{j,m} \sim \#_{1}\ket{j,m}\)</span> and <span class="math inline">\(\hat{J}_z\ket{j,m} \sim \#_{2}\ket{j,m}\)</span> where <span class="math inline">\(\#_1\)</span> and <span class="math inline">\(\#_2\)</span> are the eigenvalues and in few steps will show that <span class="math inline">\(\#_1\)</span> and <span class="math inline">\(\#_2\)</span> are related to j amd m. Now before moving forward let us define the <strong>ladder operators</strong> as <span id="eq-ladder-ops-ang-mom"><span class="math display">\[
 \hat{J}_{\pm} = \hat{J}_x \pm i \hat{J}_y
 \tag{9}\]</span></span> Now consider <span class="math inline">\(\hat{J}_{z}\hat{J}_{\pm}\ket{j,m}=(\comm{\hat{J}_z}{\hat{J}_{\pm}}+\hat{J}_{\pm}\hat{J}_z)\ket{j,m} = (\#_{2}\pm \hbar) \hat{J}_{\pm} \ket{j,m}\)</span>, what this means is that the ladder operator acting on the eigenket <span class="math inline">\(\ket{j,m}\)</span> raises or lowers the eigenvalue of <span class="math inline">\(\hat{J}_z\)</span> by <span class="math inline">\(\hbar\)</span>, but it is still an eigenket of <span class="math inline">\(\hat{J}_{z}\)</span>, hence explains the name ladder operator. Now note that <span class="math inline">\(\hat{J}^{2}\hat{J}_{\pm}\ket{j,m} = \hat{J}_{\pm}\hat{J}^{2}\ket{j,m} = \#_{1} \hat{J}_{\pm}\ket{j,m}\)</span>, which means that the ladder operator does not change the eigenvalue of <span class="math inline">\(\hat{J}^{2}\)</span>.</p>
-<div id="tip-rot-op-2comp" class="callout callout-style-default callout-note callout-titled">
+<div id="caution-ladder-ops-struct" class="callout callout-style-default callout-caution callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Note&nbsp;9
+<span class="screen-reader-only">Caution</span>Structure of Ladder-Type Operators
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>There is a generic structure to <em>ladder type operators</em>, consider the example of an infinite dimensional hilbert space for a particle in 1D, then we have <span class="math inline">\(\hat{x}\)</span> is the postion operator and <span class="math inline">\(\hat{p}\)</span> is the momentum operator and <span class="math inline">\(\comm{\hat{x}}{\hat{p}}=i \hbar\)</span> and we define the translation operator as <span class="math inline">\(\hat{T}(\epsilon) = e^{-i \epsilon \hat{p}/\hbar}\)</span> and <span class="math inline">\(e^{-i \epsilon \hat{p}/\hbar}\ket{x} = \epsilon^{n}\dv[n]{x}\ket{x} = \ket{x+\epsilon}\)</span>. So here the translation operator acts as a ladder operator on the eigenket of the position operator. But <span class="math inline">\(\hat{x}\ket{x+\epsilon} = (x+\epsilon)\ket{x+\epsilon}\)</span>.</p>
+<p>There is a generic structure to <em>ladder type operators</em>, consider the example of an infinite dimensional hilbert space for a particle in 1D, then we have <span class="math inline">\(\hat{x}\)</span> is the postion operator and <span class="math inline">\(\hat{p}\)</span> is the momentum operator and <span class="math inline">\(\comm{\hat{x}}{\hat{p}}=i\hbar\)</span> and we define the translation operator as <span class="math inline">\(\hat{T}(\epsilon) = e^{-i\epsilon \hat{p}/\hbar}\)</span> and <span class="math inline">\(e^{-i\epsilon \hat{p}/\hbar}\ket{x} = \epsilon^{n}\dv[n]{x}\ket{x} = \ket{x+\epsilon}\)</span>. So here the translation operator acts as a ladder operator on the eigenket of the position operator. But <span class="math inline">\(\hat{x}\ket{x+\epsilon} = (x+\epsilon)\ket{x+\epsilon}\)</span> and the commutation relation <span class="math inline">\(\comm{\hat{x}}{e^{-i\epsilon \hat{p}/\hbar}}=\epsilon e^{-i\epsilon \hat{p}/\hbar}\)</span>, using the trick, <span class="math inline">\(\comm{\hat{x}}{f(\hat{p})}=i\hbar\pdv{f(\hat{p})}{\hat{p}}\)</span>. Now let us get the same result using the logic of ladder operators, <span class="math inline">\(\hat{x}\hat{T}(\epsilon)=(x+\epsilon)\ket{x+\epsilon}\)</span> and <span class="math inline">\(\hat{T}(\epsilon)\hat{x}\ket{x} = x\ket{x+\epsilon}\)</span>, hence <span class="math inline">\(\comm{\hat{x}}{\hat{T}(\epsilon)} = \epsilon \hat{T}(\epsilon)\)</span>.</p>
+<p>Now consider the example of a simple harmonic oscillator, we have the ladder operators <span class="math inline">\(\hat{a}\)</span> and <span class="math inline">\(\hat{a}^{\dagger}\)</span> and the number operator <span class="math inline">\(\hat{N} = \hat{a}^{\dagger}\hat{a}\)</span> and <span class="math inline">\(\comm{\hat{N}}{\hat{a}}=-\hat{a}\)</span> and <span class="math inline">\(\comm{\hat{N}}{\hat{a}^{\dagger}}=\hat{a}^{\dagger}\)</span>. Now let us try to generalise the above in terms of a conjecture, consider an operator <span class="math inline">\(\hat{O}\)</span> and <span class="math inline">\(\hat{O}_{\pm}\)</span> as the corresponding ladder operators. Then <span class="math inline">\(\comm{\hat{O}}{\hat{O}_{\pm}}=\pm\hat{O}_{\pm}\)</span>. Can we extract more information here? Not sure but for sure there is a generic structure here which can exploieted to solve problems.</p>
 </div>
 </div>
+<p>Now let us consider the problem of finding the eigenvalues of <span class="math inline">\(\hat{J}_{z}\)</span> and <span class="math inline">\(\hat{J}^2\)</span> and re-label the eigenkets as <span class="math inline">\(\ket{a,b}\)</span> where <span class="math inline">\(\hat{J}^2\ket{a,b} = a \ket{a,b}\)</span> and <span class="math inline">\(\hat{J}_z\ket{a,b} = b \ket{a,b}\)</span>, now we can write the ladder operator, and <span class="math inline">\(\hat{J}_{\pm}=c_{\pm}\ket{a,b\pm\hbar}\)</span>, now here goal is to find relation between <span class="math inline">\(c_{\pm}\)</span>and the eigenvalues <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>. Now as shown by the action of <span class="math inline">\(\hat{J}_{\pm}\)</span> there can’t be a indefinite lowering or raising of the eigenvalue of <span class="math inline">\(\hat{J}_{z}\)</span>, while keeping the eigenvalue of <span class="math inline">\(\hat{J}^{2}\)</span> constant, as <span class="math inline">\(\hat{J}^{2} = \sum_{i}\hat{J}_{i}^{2}\)</span> hence <span class="math inline">\(a \geq b^2\)</span>, now exploiting this assertion we have <span class="math display">\[
+\hat{J}^{2} = \hat{J}_{x}^{2} + \hat{J}_{y}^{2} + \hat{J}_{z}^{2} = \frac{1}{2}(\hat{J}_{+}\hat{J}_{-} + \hat{J}_{-}\hat{J}_{+}) + \hat{J}_{z}^{2}
+\]</span> this implies <span class="math display">\[
+\hat{J}^2-\hat{J}_z^2 = \frac{1}{2}(\hat{J}_{+}\hat{J}_{-} + \hat{J}_{-}\hat{J}_{+})
+\]</span> and the RHS is a positive semi-definite operator, by normalization condition, hence asseration <span class="math inline">\(a \geq b^2\)</span> is satisfied. Now let us consider the maximum value of <span class="math inline">\(b\)</span> as <span class="math inline">\(b_{max}\)</span>, then <span class="math inline">\(\hat{J}_{+}\ket{a,b_{max}}=0\)</span>, and using the above relation we have <span class="math display">\[
+\hat{J}_{-}\hat{J}_{+}\ket{a,b_{max}}=\hat{J}_{x}^{2}+\hat{J}_{y}^{2}+i\comm{\hat{J}_{x}}{\hat{J}_{y}} = (\hat{J}^{2}-\hat{J}_{z}^{2}-\hbar\hat{J}_{z})\ket{a,b_{max}} = 0
+\]</span> <span class="math display">\[
+a - b_{max}^{2} - \hbar b_{max} = 0 \implies a = b_{max}(b_{max}+\hbar)
+\]</span> Similarly for <span class="math inline">\(\hat{J}_{+}\hat{J}_{-}\ket{a,b_{min}}=0\)</span>, we have <span class="math inline">\(a=b_{min}(b_{min}-\hbar)\)</span> now these two conditions will give us the relation <span class="math inline">\(b_{max}=-b_{min}\)</span> and <span class="math inline">\(b_{max} \geq b \geq -b_{max}\)</span> and after some finite actions of <span class="math inline">\(\hat{J}_{+}\)</span> we’ll have <span class="math inline">\(b_{max}=b_{min}+n\hbar\)</span> hence we have <span class="math inline">\(b_{max}=\frac{n\hbar}{2}\)</span> and let <span class="math inline">\(j=\frac{n}{2}\)</span> and hence we have <span class="math inline">\(b_{max}=j\hbar\)</span> and <span class="math inline">\(a=\hbar^{2}j(j+1)\)</span> and let us define <span class="math inline">\(b \equiv m\hbar\)</span> and hence we have <span class="math inline">\(m \in \{-j,-j+1,...,j-1,j\}\)</span> where cardinality is <span class="math inline">\(2j+1\)</span> and the eigenvalues of <span class="math inline">\(\hat{J}^{2}\)</span> and <span class="math inline">\(\hat{J}_{z}\)</span> are given as <span id="eq-ang-mom-squared-eigenvals"><span class="math display">\[
+\hat{J}^{2}\ket{j,m} = \hbar^{2} j(j+1) \ket{j,m}
+\tag{10}\]</span></span> <span id="eq-ang-mom-z-eigenvals"><span class="math display">\[
+\hat{J}_{z}\ket{j,m} = \hbar m \ket{j,m}
+\tag{11}\]</span></span> So if <span class="math inline">\(j\)</span> is an integer then <span class="math inline">\(m\)</span> is also an integer and if <span class="math inline">\(j\)</span> is a half-integer then <span class="math inline">\(m\)</span> is also a half-integer.</p>
+<div id="caution-dimensionality-hilbert" class="callout callout-style-default callout-caution callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Caution</span>Dimensionality of Hilbert Space
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The cardinality is also the dimension of the hilbert space and <span class="math inline">\(j=\frac{N-1}{2}\)</span> where <span class="math inline">\(N\)</span> is the dimension of the hilber space. Note that here the dimension of the hilbert space have nothing to do with the dimension of the physical space, as we have seen that for spin-<span class="math inline">\(\frac{1}{2}\)</span> particle the hilbert space is 2 dimensional but the physical space can be determined by the experimental setting.</p>
+</div>
+</div>
+</section>
+<section id="matrix-representation-of-angular-momentum-operators" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="matrix-representation-of-angular-momentum-operators"><span class="header-section-number">6</span> Matrix Representation of Angular Momentum Operators</h2>
 
 
 </section>

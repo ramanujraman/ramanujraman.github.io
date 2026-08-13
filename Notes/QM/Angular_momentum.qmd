@@ -324,6 +324,41 @@ $${#eq-ladder-ops-ang-mom}
 Now consider $\hat{J}_{z}\hat{J}_{\pm}\ket{j,m}=(\comm{\hat{J}_z}{\hat{J}_{\pm}}+\hat{J}_{\pm}\hat{J}_z)\ket{j,m} = (\#_{2}\pm \hbar) \hat{J}_{\pm} \ket{j,m}$, what this means is that the ladder operator acting on the eigenket $\ket{j,m}$ raises or lowers the eigenvalue of $\hat{J}_z$ by $\hbar$, but it is still an eigenket of $\hat{J}_{z}$, hence explains the name ladder operator.
 Now note that $\hat{J}^{2}\hat{J}_{\pm}\ket{j,m} = \hat{J}_{\pm}\hat{J}^{2}\ket{j,m} = \#_{1} \hat{J}_{\pm}\ket{j,m}$, which means that the ladder operator does not change the eigenvalue of $\hat{J}^{2}$.
 
-:::{#tip-rot-op-2comp .callout-note}
-There is a generic structure to *ladder type operators*, consider the example of an infinite dimensional hilbert space for a particle in 1D, then we have $\hat{x}$ is the postion operator and $\hat{p}$ is the momentum operator and $\comm{\hat{x}}{\hat{p}}=i \hbar$ and we define the translation operator as $\hat{T}(\epsilon) = e^{-i \epsilon \hat{p}/\hbar}$ and $e^{-i \epsilon \hat{p}/\hbar}\ket{x} = \epsilon^{n}\dv[n]{x}\ket{x} = \ket{x+\epsilon}$. So here the translation operator acts as a ladder operator on the eigenket of the position operator. But $\hat{x}\ket{x+\epsilon} = (x+\epsilon)\ket{x+\epsilon}$. 
+:::{#caution-ladder-ops-struct .callout-caution}
+## Structure of Ladder-Type Operators
+There is a generic structure to *ladder type operators*, consider the example of an infinite dimensional hilbert space for a particle in 1D, then we have $\hat{x}$ is the postion operator and $\hat{p}$ is the momentum operator and $\comm{\hat{x}}{\hat{p}}=i\hbar$ and we define the translation operator as $\hat{T}(\epsilon) = e^{-i\epsilon \hat{p}/\hbar}$ and $e^{-i\epsilon \hat{p}/\hbar}\ket{x} = \epsilon^{n}\dv[n]{x}\ket{x} = \ket{x+\epsilon}$. So here the translation operator acts as a ladder operator on the eigenket of the position operator. But $\hat{x}\ket{x+\epsilon} = (x+\epsilon)\ket{x+\epsilon}$ and the commutation relation $\comm{\hat{x}}{e^{-i\epsilon \hat{p}/\hbar}}=\epsilon e^{-i\epsilon \hat{p}/\hbar}$, using the trick, $\comm{\hat{x}}{f(\hat{p})}=i\hbar\pdv{f(\hat{p})}{\hat{p}}$.
+Now let us get the same result using the logic of ladder operators, $\hat{x}\hat{T}(\epsilon)=(x+\epsilon)\ket{x+\epsilon}$ and $\hat{T}(\epsilon)\hat{x}\ket{x} = x\ket{x+\epsilon}$, hence $\comm{\hat{x}}{\hat{T}(\epsilon)} = \epsilon \hat{T}(\epsilon)$.
+
+Now consider the example of a simple harmonic oscillator, we have the ladder operators $\hat{a}$ and $\hat{a}^{\dagger}$ and the number operator $\hat{N} = \hat{a}^{\dagger}\hat{a}$  and $\comm{\hat{N}}{\hat{a}}=-\hat{a}$ and $\comm{\hat{N}}{\hat{a}^{\dagger}}=\hat{a}^{\dagger}$. 
+Now let us try to generalise the above in terms of a conjecture, consider an operator $\hat{O}$ and $\hat{O}_{\pm}$ as the corresponding ladder operators. Then $\comm{\hat{O}}{\hat{O}_{\pm}}=\pm\hat{O}_{\pm}$. Can we extract more information here? Not sure but for sure there is a generic structure here which can exploieted to solve problems.
 :::
+Now let us consider the problem of finding the eigenvalues of $\hat{J}_{z}$ and $\hat{J}^2$ and re-label the eigenkets as $\ket{a,b}$ where $\hat{J}^2\ket{a,b} = a \ket{a,b}$ and $\hat{J}_z\ket{a,b} = b \ket{a,b}$, now we can write the ladder operator, and $\hat{J}_{\pm}=c_{\pm}\ket{a,b\pm\hbar}$, now here goal is to find relation between $c_{\pm}$and the eigenvalues $a$ and $b$. Now as shown by the action of $\hat{J}_{\pm}$ there can't be a indefinite lowering or raising of the eigenvalue of $\hat{J}_{z}$, while keeping the eigenvalue of $\hat{J}^{2}$ constant, as $\hat{J}^{2} = \sum_{i}\hat{J}_{i}^{2}$ hence $a \geq b^2$, now exploiting this assertion we have
+$$
+\hat{J}^{2} = \hat{J}_{x}^{2} + \hat{J}_{y}^{2} + \hat{J}_{z}^{2} = \frac{1}{2}(\hat{J}_{+}\hat{J}_{-} + \hat{J}_{-}\hat{J}_{+}) + \hat{J}_{z}^{2} 
+$$
+this implies
+$$
+\hat{J}^2-\hat{J}_z^2 = \frac{1}{2}(\hat{J}_{+}\hat{J}_{-} + \hat{J}_{-}\hat{J}_{+})
+$$
+and the RHS is a positive semi-definite operator, by normalization condition, hence asseration $a \geq b^2$ is satisfied. Now let us consider the maximum value of $b$ as $b_{max}$, then $\hat{J}_{+}\ket{a,b_{max}}=0$, and using the above relation we have
+$$
+\hat{J}_{-}\hat{J}_{+}\ket{a,b_{max}}=\hat{J}_{x}^{2}+\hat{J}_{y}^{2}+i\comm{\hat{J}_{x}}{\hat{J}_{y}} = (\hat{J}^{2}-\hat{J}_{z}^{2}-\hbar\hat{J}_{z})\ket{a,b_{max}} = 0
+$$ 
+$$
+a - b_{max}^{2} - \hbar b_{max} = 0 \implies a = b_{max}(b_{max}+\hbar)
+$$
+Similarly for $\hat{J}_{+}\hat{J}_{-}\ket{a,b_{min}}=0$, we have $a=b_{min}(b_{min}-\hbar)$ now these two conditions will give us the relation $b_{max}=-b_{min}$ and $b_{max} \geq b \geq -b_{max}$ and after some finite actions of $\hat{J}_{+}$ we'll have $b_{max}=b_{min}+n\hbar$ hence we have $b_{max}=\frac{n\hbar}{2}$ and let $j=\frac{n}{2}$ and hence we have $b_{max}=j\hbar$ and $a=\hbar^{2}j(j+1)$ and let us define $b \equiv m\hbar$ and hence we have $m \in \{-j,-j+1,...,j-1,j\}$ where cardinality is $2j+1$ and the eigenvalues of $\hat{J}^{2}$ and $\hat{J}_{z}$ are given as
+$$
+\hat{J}^{2}\ket{j,m} = \hbar^{2} j(j+1) \ket{j,m}
+$${#eq-ang-mom-squared-eigenvals}
+$$
+\hat{J}_{z}\ket{j,m} = \hbar m \ket{j,m}
+$${#eq-ang-mom-z-eigenvals}
+So if $j$ is an integer then $m$ is also an integer and if $j$ is a half-integer then $m$ is also a half-integer. 
+
+:::{#caution-dimensionality-hilbert .callout-caution}
+# Dimensionality of Hilbert Space
+The cardinality is also the dimension of the hilbert space and $j=\frac{N-1}{2}$ where $N$ is the dimension of the hilber space. Note that here the dimension of the hilbert space have nothing to do with the dimension of the physical space, as we have seen that for spin-$\frac{1}{2}$ particle the hilbert space is 2 dimensional but the physical space can be determined by the experimental setting.
+:::
+
+## Matrix Representation of Angular Momentum Operators
