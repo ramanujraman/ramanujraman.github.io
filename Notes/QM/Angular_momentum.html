@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Ramanuj Raman">
-<meta name="dcterms.date" content="2026-08-13">
+<meta name="dcterms.date" content="2026-08-16">
 
 <title>Theory of Angular Momentum – Ramanuj Raman</title>
 <style>
@@ -340,15 +340,28 @@ window.Quarto = {
    
   <ul>
   <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction"><span class="header-section-number">1</span> Introduction</a></li>
-  <li><a href="#rotations-and-angular-momentum-commutation-relations" id="toc-rotations-and-angular-momentum-commutation-relations" class="nav-link" data-scroll-target="#rotations-and-angular-momentum-commutation-relations"><span class="header-section-number">2</span> Rotations and Angular Momentum Commutation Relations</a></li>
-  <li><a href="#finite-rotation-in-quantum-mechanics" id="toc-finite-rotation-in-quantum-mechanics" class="nav-link" data-scroll-target="#finite-rotation-in-quantum-mechanics"><span class="header-section-number">3</span> Finite Rotation in Quantum mechanics</a></li>
-  <li><a href="#spin-frac12-systems-and-finite-rotations" id="toc-spin-frac12-systems-and-finite-rotations" class="nav-link" data-scroll-target="#spin-frac12-systems-and-finite-rotations"><span class="header-section-number">4</span> Spin-<span class="math inline">\(\frac{1}{2}\)</span> Systems and Finite Rotations</a>
+  <li><a href="#rotations-and-angular-momentum-commutation-relations" id="toc-rotations-and-angular-momentum-commutation-relations" class="nav-link" data-scroll-target="#rotations-and-angular-momentum-commutation-relations"><span class="header-section-number">2</span> Rotations and Angular Momentum Commutation Relations</a>
   <ul class="collapse">
-  <li><a href="#pauli-two-component-formalism" id="toc-pauli-two-component-formalism" class="nav-link" data-scroll-target="#pauli-two-component-formalism"><span class="header-section-number">4.1</span> Pauli Two Component Formalism</a></li>
-  <li><a href="#rotation-in-two-component-formalism" id="toc-rotation-in-two-component-formalism" class="nav-link" data-scroll-target="#rotation-in-two-component-formalism"><span class="header-section-number">4.2</span> Rotation in Two Component Formalism</a></li>
+  <li><a href="#finite-rotation-in-quantum-mechanics" id="toc-finite-rotation-in-quantum-mechanics" class="nav-link" data-scroll-target="#finite-rotation-in-quantum-mechanics"><span class="header-section-number">2.1</span> Finite Rotation in Quantum mechanics</a></li>
   </ul></li>
-  <li><a href="#eigenvalues-and-eigenvectors-of-angular-momentum" id="toc-eigenvalues-and-eigenvectors-of-angular-momentum" class="nav-link" data-scroll-target="#eigenvalues-and-eigenvectors-of-angular-momentum"><span class="header-section-number">5</span> Eigenvalues and Eigenvectors of Angular Momentum</a></li>
-  <li><a href="#matrix-representation-of-angular-momentum-operators" id="toc-matrix-representation-of-angular-momentum-operators" class="nav-link" data-scroll-target="#matrix-representation-of-angular-momentum-operators"><span class="header-section-number">6</span> Matrix Representation of Angular Momentum Operators</a></li>
+  <li><a href="#spin-frac12-systems-and-finite-rotations" id="toc-spin-frac12-systems-and-finite-rotations" class="nav-link" data-scroll-target="#spin-frac12-systems-and-finite-rotations"><span class="header-section-number">3</span> Spin-<span class="math inline">\(\frac{1}{2}\)</span> Systems and Finite Rotations</a>
+  <ul class="collapse">
+  <li><a href="#pauli-two-component-formalism" id="toc-pauli-two-component-formalism" class="nav-link" data-scroll-target="#pauli-two-component-formalism"><span class="header-section-number">3.1</span> Pauli Two Component Formalism</a>
+  <ul class="collapse">
+  <li><a href="#some-properties-of-pauli-matrices" id="toc-some-properties-of-pauli-matrices" class="nav-link" data-scroll-target="#some-properties-of-pauli-matrices"><span class="header-section-number">3.1.1</span> Some Properties of Pauli Matrices</a></li>
+  </ul></li>
+  <li><a href="#rotation-in-two-component-formalism" id="toc-rotation-in-two-component-formalism" class="nav-link" data-scroll-target="#rotation-in-two-component-formalism"><span class="header-section-number">3.2</span> Rotation in Two Component Formalism</a></li>
+  <li><a href="#eigenvalues-and-eigenvectors-of-angular-momentum" id="toc-eigenvalues-and-eigenvectors-of-angular-momentum" class="nav-link" data-scroll-target="#eigenvalues-and-eigenvectors-of-angular-momentum"><span class="header-section-number">3.3</span> Eigenvalues and Eigenvectors of Angular Momentum</a></li>
+  </ul></li>
+  <li><a href="#matrix-representation-of-operators" id="toc-matrix-representation-of-operators" class="nav-link" data-scroll-target="#matrix-representation-of-operators"><span class="header-section-number">4</span> Matrix Representation of Operators</a>
+  <ul class="collapse">
+  <li><a href="#angular-momentum-operators" id="toc-angular-momentum-operators" class="nav-link" data-scroll-target="#angular-momentum-operators"><span class="header-section-number">4.1</span> Angular Momentum Operators</a></li>
+  <li><a href="#rotation-operators" id="toc-rotation-operators" class="nav-link" data-scroll-target="#rotation-operators"><span class="header-section-number">4.2</span> Rotation Operators</a></li>
+  </ul></li>
+  <li><a href="#orbital-angular-momentum" id="toc-orbital-angular-momentum" class="nav-link" data-scroll-target="#orbital-angular-momentum"><span class="header-section-number">5</span> Orbital Angular Momentum</a>
+  <ul class="collapse">
+  <li><a href="#orbital-angular-momentum-as-generator-of-rotations" id="toc-orbital-angular-momentum-as-generator-of-rotations" class="nav-link" data-scroll-target="#orbital-angular-momentum-as-generator-of-rotations"><span class="header-section-number">5.1</span> Orbital Angular Momentum as generator of Rotations</a></li>
+  </ul></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="Angular_momentum.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -375,7 +388,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 13, 2026</p>
+      <p class="date">August 16, 2026</p>
     </div>
   </div>
   
@@ -387,11 +400,11 @@ window.Quarto = {
 </header>
 
 
-<section id="introduction" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="introduction"><span class="header-section-number">1</span> Introduction</h2>
+<section id="introduction" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
 </section>
-<section id="rotations-and-angular-momentum-commutation-relations" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="rotations-and-angular-momentum-commutation-relations"><span class="header-section-number">2</span> Rotations and Angular Momentum Commutation Relations</h2>
+<section id="rotations-and-angular-momentum-commutation-relations" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Rotations and Angular Momentum Commutation Relations</h1>
 <p>In classical mechanics we cause rotation of a vector <span class="math inline">\(\vec{v}\)</span> by applying a rotation matrix <span class="math inline">\(R\)</span> such that <span class="math inline">\(\vec{v'}=R \vec{v}\)</span> where <span class="math inline">\(\vec{v'}\)</span> is the rotated vector. The rotation matrix is suppose to follow the following properties</p>
 <ul>
 <li><span class="math display">\[R^{T}R = RR^{T} = I\]</span></li>
@@ -426,9 +439,8 @@ Note&nbsp;2: Exercise
 </div>
 </div>
 <p>Now let us consider a unitary operator which generates the rotation and let <span class="math inline">\(\vec{J} \cdot \hat{n}\)</span> be the generator of the rotation where <span class="math inline">\(\vec{J} = \{\hat{J}_x, \hat{J}_y, \hat{J}_z\}\)</span> and <span class="math inline">\(\hat{n}\)</span> is a unit vector in the direction of the rotation axis. So we can write the <span class="math inline">\(\mathcal{D}(R) = e^{-i \vec{J} \cdot \hat{n} \theta}\)</span>. Now in the small angle approximation we have <span class="math inline">\(\mathcal{D}(R) = 1 - i \vec{J} \cdot \hat{n} \theta + \mathcal{O}(\theta^2)\)</span></p>
-</section>
-<section id="finite-rotation-in-quantum-mechanics" class="level2" data-number="3">
-<h2 data-number="3" class="anchored" data-anchor-id="finite-rotation-in-quantum-mechanics"><span class="header-section-number">3</span> Finite Rotation in Quantum mechanics</h2>
+<section id="finite-rotation-in-quantum-mechanics" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="finite-rotation-in-quantum-mechanics"><span class="header-section-number">2.1</span> Finite Rotation in Quantum mechanics</h2>
 <p>We can re-write the rotation around an axis as compounding of multiple infinitesimal rotation around the axis as <span class="math display">\[
 \mathcal{D}_z(\phi) = \lim_{N \to \infty} \left(1 - i \hat{J}_z \frac{\phi}{N}\right)^N
 \]</span> which is <span class="math display">\[
@@ -480,8 +492,9 @@ Note&nbsp;4: Exercise
 </div>
 </div>
 </section>
-<section id="spin-frac12-systems-and-finite-rotations" class="level2" data-number="4">
-<h2 data-number="4" class="anchored" data-anchor-id="spin-frac12-systems-and-finite-rotations"><span class="header-section-number">4</span> Spin-<span class="math inline">\(\frac{1}{2}\)</span> Systems and Finite Rotations</h2>
+</section>
+<section id="spin-frac12-systems-and-finite-rotations" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Spin-<span class="math inline">\(\frac{1}{2}\)</span> Systems and Finite Rotations</h1>
 <p>The lowest number,N, of dimensions in which the the angular momentum commutation in <a href="#eq-ang-mom-comm" class="quarto-xref">Equation&nbsp;1</a> are realised is <span class="math inline">\(N=2\)</span>. Now the generators of the rotation for <span class="math inline">\(N=2\)</span> which satisfy the commutation relation are <span id="eq-sigma-x"><span class="math display">\[
 \sigma_{x} = \begin{pmatrix}
 0 &amp; 1 \\
@@ -523,8 +536,8 @@ e^{-i \hat{J}_z \phi / \hbar} |\alpha\rangle &amp;= e^{-i \hat{J}_z \phi / \hbar
 &amp;= (e^{-i \phi/2}|0\rangle \langle0|\alpha\rangle + e^{i \phi/2}|1\rangle \langle1|\alpha\rangle)
 \end{aligned}
 \]</span> Now for <span class="math inline">\(\phi=2\pi\)</span>, <span class="math inline">\(|\alpha\rangle_{R_{z}(2\pi)} = -|\alpha\rangle\)</span>. This is the most astonishing result that after a <span class="math inline">\(2\pi\)</span> rotation one pick up a negative sign and in principle it takes two <span class="math inline">\(2\pi\)</span> rotations to return to the original state. But in quantum theory we only measure the expectation value of operators and the phase becomes irrevelant so how we detect the sign?</p>
-<section id="pauli-two-component-formalism" class="level3" data-number="4.1">
-<h3 data-number="4.1" class="anchored" data-anchor-id="pauli-two-component-formalism"><span class="header-section-number">4.1</span> Pauli Two Component Formalism</h3>
+<section id="pauli-two-component-formalism" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="pauli-two-component-formalism"><span class="header-section-number">3.1</span> Pauli Two Component Formalism</h2>
 <p>Introduced by Wolfgag Pauli in 1927, the two component formalism is a way to represent spin-<span class="math inline">\(\frac{1}{2}\)</span> particles using two component spinors, which becomes more apparent when we consider the full relativistic treatment. As we understood in earlier sections that vectors can be represented using column matrix depending upon the dimensions of the hilbert space. So for spin-<span class="math inline">\(\frac{1}{2}\)</span> particle state can be represented as <span class="math display">\[
 |0\rangle = \begin{pmatrix}
 1 \\
@@ -562,8 +575,8 @@ i &amp; 0
 0 &amp; -1
 \end{pmatrix}
 \]</span></p>
-<section id="some-properties-of-pauli-matrices" class="level4" data-number="4.1.1">
-<h4 data-number="4.1.1" class="anchored" data-anchor-id="some-properties-of-pauli-matrices"><span class="header-section-number">4.1.1</span> Some Properties of Pauli Matrices</h4>
+<section id="some-properties-of-pauli-matrices" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="some-properties-of-pauli-matrices"><span class="header-section-number">3.1.1</span> Some Properties of Pauli Matrices</h3>
 <ol type="1">
 <li>Hermitian: <span class="math inline">\(\sigma_{i}^{\dagger} = \sigma_{i}\)</span></li>
 <li>Unitary: <span class="math inline">\(\sigma_{i}^{\dagger} = \sigma_{i}\)</span></li>
@@ -615,8 +628,8 @@ a_i b_j \sigma_i \sigma_j = a_i b_j (i \epsilon_{ijk} \sigma_k + \delta_{ij} I) 
 <p>For <span class="math inline">\(\vec{a} \in \mathbb{R}^3\)</span> we can show that <span class="math inline">\((\vec{\sigma}\cdot\vec{a})^{2} = |\vec{a}|^2 I\)</span> using <a href="#eq-pauli-mult" class="quarto-xref">Equation&nbsp;6</a>.</p>
 </section>
 </section>
-<section id="rotation-in-two-component-formalism" class="level3" data-number="4.2">
-<h3 data-number="4.2" class="anchored" data-anchor-id="rotation-in-two-component-formalism"><span class="header-section-number">4.2</span> Rotation in Two Component Formalism</h3>
+<section id="rotation-in-two-component-formalism" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="rotation-in-two-component-formalism"><span class="header-section-number">3.2</span> Rotation in Two Component Formalism</h2>
 <p>As we have shown in the earlier sections that the <span class="math inline">\(\{\sigma_i\}\)</span> are the generators of the rotation in the two dimensional hilbert space. So we can write the rotation operator as a <span class="math inline">\(2 \times 2\)</span> matrix as</p>
 <div id="tip-rot-op-2comp" class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -649,9 +662,8 @@ e^{-i \frac{\phi}{2} \hat{n} \cdot \vec{\sigma}} = \cos\left(\frac{\phi}{2}\righ
 \chi^{\dagger} \sigma_{i} \chi \to R_{ij} \chi^{\dagger} \sigma_{j} \chi
 \]</span> Now as we have seen earlier that under <span class="math inline">\(2\pi\)</span> roatation the spinor picks up a negative sign but what is the eigenvalue of the rotation operator. So we are interested in finding <span class="math inline">\(\mathcal{D}(\phi,\hat{n})\chi = \chi\)</span>.</p>
 </section>
-</section>
-<section id="eigenvalues-and-eigenvectors-of-angular-momentum" class="level2" data-number="5">
-<h2 data-number="5" class="anchored" data-anchor-id="eigenvalues-and-eigenvectors-of-angular-momentum"><span class="header-section-number">5</span> Eigenvalues and Eigenvectors of Angular Momentum</h2>
+<section id="eigenvalues-and-eigenvectors-of-angular-momentum" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="eigenvalues-and-eigenvectors-of-angular-momentum"><span class="header-section-number">3.3</span> Eigenvalues and Eigenvectors of Angular Momentum</h2>
 <p>Consider a new operator defined as <span id="eq-ang-mom-squared"><span class="math display">\[
 \hat{J}^{2} = \hat{J}_x^2 + \hat{J}_y^2 + \hat{J}_z^2 = \hat{J}_i \hat{J}_i
 \tag{8}\]</span></span></p>
@@ -721,10 +733,77 @@ a - b_{max}^{2} - \hbar b_{max} = 0 \implies a = b_{max}(b_{max}+\hbar)
 </div>
 </div>
 </section>
-<section id="matrix-representation-of-angular-momentum-operators" class="level2" data-number="6">
-<h2 data-number="6" class="anchored" data-anchor-id="matrix-representation-of-angular-momentum-operators"><span class="header-section-number">6</span> Matrix Representation of Angular Momentum Operators</h2>
+</section>
+<section id="matrix-representation-of-operators" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Matrix Representation of Operators</h1>
+<section id="angular-momentum-operators" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="angular-momentum-operators"><span class="header-section-number">4.1</span> Angular Momentum Operators</h2>
+<p>Now we have the eigenvalues of <span class="math inline">\(\hat{J}^{2}\)</span> and <span class="math inline">\(\hat{J}_{z}\)</span>, we can write the matrix representation of the angular momentum operators in the eigenbasis of <span class="math inline">\(\hat{J}^{2}\)</span> and <span class="math inline">\(\hat{J}_{z}\)</span> as <span id="eq-mel-j2"><span class="math display">\[
+\mel{j',m'}{\hat{J}^{2}}{j,m} = \hbar^{2} j(j+1) \delta_{jj'} \delta_{mm'}
+\tag{12}\]</span></span> <span id="eq-mel-jz"><span class="math display">\[
+\mel{j',m'}{\hat{J}_{z}}{j,m} = \hbar m \delta_{jj'} \delta_{mm'}
+\tag{13}\]</span></span></p>
+<p>Now more important is the matrix representation of the ladder operators, which can be derived using the following relation <span class="math display">\[
+\hat{J}_{\pm}\ket{j,m} = c_{\pm}\ket{j,m \pm 1}
+\]</span> <span class="math display">\[
+\bra{j,m}\hat{J}_{\mp}\hat{J}_{\pm}\ket{j,m} = \abs{c_{\pm}}^2
+\]</span> Now lhs is <span class="math inline">\(\hat{J}_{\mp}\hat{J}_{\pm}=\hat{J}^2-\hat{J}_{z}^2\pm i\comm{\hat{J}_{x}}{\hat{J}_{y}}\)</span>,hence we have <span class="math inline">\(c_{\pm} = \hbar \sqrt{j(j+1)-m(m\pm 1)}\)</span> so we have <span id="eq-mel-jpm"><span class="math display">\[
+\mel{j',m'}{\hat{J}_{\pm}}{j,m} = \hbar \sqrt{j(j+1)-m(m\pm 1)} \delta_{jj'} \delta_{m',m\pm 1}
+\tag{14}\]</span></span></p>
+</section>
+<section id="rotation-operators" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="rotation-operators"><span class="header-section-number">4.2</span> Rotation Operators</h2>
+<p>Now consider the rotation operator <span class="math inline">\(\mathcal{D}(R)\)</span>, where <span class="math inline">\(R\)</span> is a rotation defined by angle <span class="math inline">\(\phi\)</span> and axis <span class="math inline">\(\hat{n}\)</span>. Hence its matrix elements are given as <span class="math display">\[
+\mathcal{D}^{(j)}_{m'm}(R) = \mel{j,m'}{\mathcal{D}(R)}{j,m} = \mel{j,m'}{e^{-i \hat{J} \cdot \hat{n} \phi / \hbar}}{j,m}
+\]</span> Note that there are no matrix elements between different j’s as <span class="math inline">\(\hat{J}^{2}\)</span> commutes with <span class="math inline">\(\mathcal{D}(R)\)</span> and hence the rotation operator is block diagonal in the eigenbasis of <span class="math inline">\(\hat{J}^{2}\)</span> and <span class="math inline">\(\hat{J}_{z}\)</span>. Now note that the matrix formed by this is the irreducible representation of the rotation operator, and is called the Wigner D-matrix. The dimension of this matrix is <span class="math inline">\(2j+1\)</span> and hence for spin-<span class="math inline">\(\frac{1}{2}\)</span> particle the dimension of the Wigner D-matrix is 2. Like the Rotation operator, the Wigner D-matrix also satisfies the group properties for each j.</p>
+<p>Now we can use <span class="math inline">\(\alpha\)</span>,<span class="math inline">\(\beta\)</span>,<span class="math inline">\(\gamma\)</span> as the Euler angles to represent the rotation operator as <span class="math inline">\(\mathcal{D}(R) = \mathcal{D}(\alpha,\beta,\gamma) = e^{-i \hat{J}_z \alpha / \hbar} e^{-i \hat{J}_y \beta / \hbar} e^{-i \hat{J}_z \gamma / \hbar}\)</span> and hence we can write the matrix elements of the Wigner D-matrix as <span class="math display">\[
+\mathcal{D}^{(j)}_{m'm}(\alpha,\beta,\gamma) = \mel{j,m'}{e^{-i \hat{J}_z \alpha / \hbar} e^{-i \hat{J}_y \beta / \hbar} e^{-i \hat{J}_z \gamma / \hbar}}{j,m}
+\]</span></p>
+</section>
+</section>
+<section id="orbital-angular-momentum" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Orbital Angular Momentum</h1>
+<p>So in earlier in section we talked about the angular momentum operator <span class="math inline">\(\hat{J}\)</span> as a generator of infitesimally small rotation. Now earlier we talked about spin angular momentum which is an intrinsic property of the particle, but there is another type of angular momentum which is called orbital angular momentum and it is related to the motion of the particle in space. Now we can define the orbital angular momentum operator, following the same idea in classical mechanics as <span id="eq-orb-ang-mom"><span class="math display">\[
+\hat{L} = \hat{x} \times \hat{p}
+\tag{15}\]</span></span></p>
+<section id="orbital-angular-momentum-as-generator-of-rotations" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="orbital-angular-momentum-as-generator-of-rotations"><span class="header-section-number">5.1</span> Orbital Angular Momentum as generator of Rotations</h2>
+<p>In this next seciton I’ll show that the orbital angular momentum operator is generator of rotation in the position space and hence it satisfies the same commutation relation as the angular momentum operator <span class="math inline">\(\hat{J}\)</span>.</p>
+<div id="tip-orb-ang-mom-comm" class="tip callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note&nbsp;9: Orbital Angular Momentum Commutation Relation
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The orbital angular momentum operator satisfies the same commutation relation as <span class="math inline">\(\hat{J}\)</span> <span id="eq-orb-ang-mom-comm"><span class="math display">\[
+\comm{\hat{L}_i}{\hat{L}_j} = i \hbar \epsilon_{ijk} \hat{L}_k
+\tag{16}\]</span></span> <strong>Proof:</strong> Consider the angular momentum operator <span class="math inline">\(\hat{L}_{i} = \epsilon_{iab} \hat{x}_{a} \hat{p}_{b}\)</span> and <span class="math inline">\(\hat{L}_{j} = \epsilon_{jcd} \hat{x}_{c} \hat{p}_{d}\)</span>, now we can write the commutator as <span class="math display">\[
+\comm{\hat{L}_i}{\hat{L}_j} = \epsilon_{iab} \epsilon_{jcd} \comm{\hat{x}_{a} \hat{p}_{b}}{\hat{x}_{c} \hat{p}_{d}}
+\]</span> Now using the identity <span class="math inline">\(\comm{AB}{CD} = A\comm{B}{C}D + \comm{A}{C}DB + C\comm{A}{D}B + C A \comm{B}{D}\)</span> and the canonical commutation relation <span class="math inline">\(\comm{\hat{x}_{i}}{\hat{p}_{j}} = i \hbar \delta_{ij}\)</span> we can write the above as <span class="math display">\[
+\comm{\hat{L}_i}{\hat{L}_j} = i \hbar \epsilon_{iab} \epsilon_{jcd} (\delta_{bc} \hat{x}_{a} \hat{p}_{d} - \delta_{ad} \hat{x}_{c} \hat{p}_{b}) = i \hbar (\epsilon_{iab} \epsilon_{jcb} \hat{x}_{a} \hat{p}_{d} - \epsilon_{iab} \epsilon_{jcd} \delta_{ad} \hat{x}_{c} \hat{p}_{b})
+\]</span> Now using the identity <span class="math inline">\(\epsilon_{iab} \epsilon_{jcb} = \delta_{ij} \delta_{ac} - \delta_{ic} \delta_{aj}\)</span> and <span class="math inline">\(\epsilon_{iab} \epsilon_{jcd} \delta_{ad} = \delta_{ij} \delta_{bc} - \delta_{ic} \delta_{bj}\)</span> we can write <span class="math display">\[
+\comm{\hat{L}_i}{\hat{L}_j} = i \hbar (\delta_{ij} \hat{x}_{a} \hat{p}_{a} - \delta_{ic} \hat{x}_{j} \hat{p}_{c} - \delta_{ij} \hat{x}_{c} \hat{p}_{c} + \delta_{ic} \hat{x}_{c} \hat{p}_{j}) = i \hbar (\hat{x}_{i} \hat{p}_{j} - \hat{x}_{j} \hat{p}_{i}) = i \hbar \epsilon_{ijk} \hat{L}_k
+\]</span> hence we have shown that the orbital angular momentum operator satisfies the same commutation relation as the angular momentum operator <span class="math inline">\(\hat{J}\)</span>.</p>
+</div>
+</div>
+<p>Now to put the nail in the coffin, we show that <span class="math inline">\(e^{-i \delta \phi \hat{L}_{z}/\hbar}\)</span> is indeed a rotation operator in the position space. Consider a state <span class="math inline">\(\ket{x',y',z'}\)</span> and the action of the rotation operator on this state is given as <span class="math display">\[
+\left(1-i \frac{\delta \phi}{\hbar} \hat{L}_{z}\right)\ket{x',y',z'} = \left(1-i \frac{\delta \phi}{\hbar} (\hat{x} \hat{p}_{y} - \hat{y} \hat{p}_{x})\right)\ket{x',y',z'}
+\]</span> Now because <span class="math inline">\(\comm{\hat{x}_{i}}{\hat{p}_{j}} = i \hbar \delta_{ij}\)</span>, we can swtich the order of the operators above and write the above as <span class="math display">\[
+\left(1-i \frac{\delta \phi}{\hbar} (\hat{p}_{y} \hat{x} - \hat{p}_{x} \hat{y})\right)\ket{x',y',z'} = \left(1-i \frac{\delta \phi}{\hbar} (\hat{p}_{y} x' - \hat{p}_{x} y')\right)\ket{x',y',z'}
+\]</span> Now with here the second term is a translation operator acting in the <span class="math inline">\(x-y\)</span> plane and we can write the above as <span class="math display">\[
+\left(1-i \frac{\delta \phi}{\hbar} (\hat{p}_{y} x' - \hat{p}_{x} y')\right)\ket{x',y',z'} = \left(1-i \frac{\delta \phi}{\hbar} (\hat{p}_{y} x' - \hat{p}_{x} y')\right)\ket{x',y',z'} = \ket{x'-y'\delta \phi, y'+x'\delta \phi, z'}
+\]</span> hence we have shown that the orbital angular momentum operator is indeed a generator of rotation in the position space. Now it comes with no surpries that we should be using spherical coordinates to represent the orbital angular momentum operator. Consider the wavefunction as <span class="math inline">\(\ket{\alpha}\)</span>, then the action of the orbital angular momentum operator on the wavefunction is given as <span class="math display">\[
+\bra{r,\theta,\phi}\left(1-i \frac{\delta \phi}{\hbar}\hat{L}_z\right)\ket{\alpha} = \braket{r,\theta,\phi-\delta \phi}{\alpha} = \braket{r,\theta,\phi}{\alpha} - \delta \phi \pdv{\phi}\braket{r,\theta,\phi}{\alpha}
+\]</span> hence we can write the orbital angular momentum operator in spherical coordinates as <span class="math display">\[
+\hat{L}_z = -i \hbar \pdv{\phi}
+\]</span></p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
